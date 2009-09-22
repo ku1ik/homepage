@@ -1,0 +1,28 @@
+---
+title: Rubytime plasmoid
+tags: kde, plasmoid, python, rubytime, widget
+
+layout: post
+---
+
+"Rubytime":http://rubytime.org was first "Lunar Logic Polska":http://lunarlogicpolska.com Ruby on Rails application. When I've started working at LLP Rubytime was at version 2.1. Almost every programmer at LLP commited some changes for it during its lifetime and the code which remembered Rails 1.x needed a serious rewrite. I had the chance to rewrite it from scratch using Merb and DataMapper (this was fun). So now we have Rubytime 3 with good quality code and JSON API (read on).
+
+As I'm big fan of KDE 4 (3.x sucked) and whole plasma stuff I wanted to play a little with plasmoids API. So Rubytime plasmoid has been born. The main goal of the plasmoid is to ease reporting time spent on projects right from your KDE desktop without need to open Rubytime in the browser.
+
+<p class="images"><img src="http://farm4.static.flickr.com/3547/3660600190_ccc138c3e6_o.png" /></p>
+
+The main plasmoid features are:
+* Reporting new activities
+* Showing list of recently added activities
+* Notifying (through KDE’s KNotify system) about missing reports for _yesterday_ and _today_
+
+Widget is written in Python, using Python KDE bindings (Ruby bindings were broken at that time and I just wanted to learn KDE/Plasma API instead of wasting my time on fighting with C++). It has fully configurable system notification thanks to mighty KNotify4 subsystem:
+
+<p class="images">
+  <%= image "http://farm4.static.flickr.com/3410/3659830221_325c6e7df1_m.jpg", "http://farm4.static.flickr.com/3410/3659830221_a2babe446d_o.png" %>
+  <%= image "http://farm4.static.flickr.com/3574/3659830087_73e150221f_m.jpg", "http://farm4.static.flickr.com/3574/3659830087_1d816a2949_o.png" %>
+</p>
+
+Communication with Rubytime is done using RT's JSON API (gee, I need to finally find some time to document the API so other developers can start creating more add-ons for RT).
+
+If you dare to use it please keep in mind that it was tested on KDE 4.2.x and 4.3 beta2. I doubt that it will work on 4.1. You can grab it straight from "github repository":http://github.com/sickill/rubytime-plasmoid/tree/master. Enjoy!

@@ -1,0 +1,8 @@
+---
+title: Battle of superheroes - HTML Canvas element experiment
+tags: canvas, html, javascript
+
+layout: post
+---
+
+what can be done? how fast it is...

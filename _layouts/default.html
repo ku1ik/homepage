@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Sickill.net - <%= @title || "Home" %></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="<%= @title || "Marcin Kulik's tech stuff" %>" />
+  <meta name="keywords" content="<%= (["marcin kulik", "mkulik", "sickill", "blog"] + (@keywords || [])).uniq.join(", ") %>" />
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="http://feeds2.feedburner.com/SickillNet" />
+  <link rel="stylesheet" href="/css/reset.css" type="text/css" />
+  <link rel="stylesheet" href="/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/css/sickill.css" type="text/css" />
+  <link rel="stylesheet" href="/css/jquery.lightbox-0.5.css" type="text/css" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="openid.server" href="http://www.myopenid.com/server" />
+  <link rel="openid.delegate" href="http://sickill.myopenid.com/" />
+  <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=sickill.myopenid.com" />
+  <script type="text/javascript" src="/javascripts/jquery-1.2.6.min.js"></script>
+  <script type="text/javascript" src="/javascripts/sickill.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery.lightbox-0.5.pack.js"></script>
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <div class="logo">
+      <a href="/">sickill.net</a><br/>
+      Marcin Kulik's Home Page
+    </div>
+    <div id="tabs" class="tabs">
+      <ul>
+        <li><%= link_to("Blog", "/") %></li>
+        <li><%= link_to("My projects", "/projects") %></li>
+        <li><%= link_to("About me", "/about-me") %></li>
+        <li><%= link_to("Contact", "/contact") %></li>
+      </ul>
+    </div>
+  </div>
+  <div id="page">
+    <div id="content">
+      <div style="height: 350px; width: 0px; visible: 0; float: left;"></div>
+      <%= yield %>
+    </div>
+    <div id="sidebar">
+      <!-- <div class="content_box">
+        <img src="/images/sickill-avatar-64.png" class="avatar" />
+      </div> -->
+      <div class="content_box menu">
+        <p>
+          <%= link_to("RSS Feed", "http://feeds2.feedburner.com/SickillNet", :class => "feed") %>
+        </p>
+        <p>
+          <%= link_to("Twitter", "http://www.twitter.com/sickill", :class => "twitter") %>
+        </p>
+      </div>
+      <div class="content_box menu">
+        <%= partial :archives %>
+      </div>
+      <div class="content_box menu">
+        <%= partial :tags %>
+      </div>
+    </div>
+    <br style="clear:both;" />
+  </div>
+  <div id="footer">
+    <span class="powered">Powered by <a href="http://www.sinatrarb.com/">Sinatra</a>, <a href="http://disqus.com">Disqus</a> and <a href="http://nginx.net/">Nginx</a></span>
+    &nbsp; <span class="powered">Styled by Sickill, <a href="http://www.flickr.com/photos/tristanf/3065740880/">background</a> by <a href="http://www.cookinrelaxin.com/">Tristan Ferne</a></span>
+  </div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5523452-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

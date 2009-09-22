@@ -1,0 +1,9 @@
+h2. About Me
+
+My name is Marcin Kulik.
+
+!(photo)http://farm4.static.flickr.com/3137/2452888310_2f7870da4f_m_d.jpg! I graduated from the Akademia Górniczo-Hutnicza in Cracow with a master's degree in computer science.
+I live in Cracow and I'm software engineer at "Lunar Logic Polska":http://lunarlogicpolska.com, one of Poland's largest and most experienced agile Ruby on Rails development teams.
+
+
+Want to know more about me? Check out my Curriculum Vitae or my LinkedIn profile.

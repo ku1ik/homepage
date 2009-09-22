@@ -1,0 +1,23 @@
+---
+title: Funny marketing bullshit
+tags: bullshit, funny, micro$oft
+
+layout: post
+---
+
+Few days ago my workmates sent me a link to latest microsoft IE8 propaganda article called 'Windows Internet Explorer 8: Get the facts'. When I opened it I wasn't surprised, the comparison was full of understatements and lies. Just normal microsoft brainwash, nothing interesting. 
+
+I thought: this is so funny, I'll bookmark it as some 'funny' stuff. So I opened delicious.com bookmark dialog and saw 'Recommended' and 'Popular' tags lists. Look at this:
+
+<p class="images"><%= image("http://farm4.static.flickr.com/3348/3646899607_5315160a3c.jpg", "http://farm4.static.flickr.com/3348/3646899607_c802abbc59_o.png") %></p>
+
+Funny, marketing, bullshit, humor. I had exactly this in mind when I was opening bookmark dialog. Smile appeared on my face. If those tags are recommended by delicious it means that good percentage of people take it as bullshit. That's nice. I've opened "delicious page for this brainwash":http://delicious.com/url/8f2961b515d9634beeda3eb6b4abd05d to check how many people bookmarked it:
+
+<p class="images"><img src="http://farm4.static.flickr.com/3309/3646955123_01ab3c3ff0_o.png"/></p>
+
+142 bookmarks in 4 days. And looking at all tags assigned for this article we can see obvious tags like ie8, comparison, firefox, internet, explorer, web, microsoft. But almost all of bookmarks have tags like fraud, humor, funny, propaganda, marketing, FUD, ridiculous, lies.
+
+<p class="images"><img src="http://farm4.static.flickr.com/3609/3647863114_acc9fe026a_o.png"/></p>
+
+
+Awareness grows.

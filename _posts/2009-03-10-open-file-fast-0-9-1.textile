@@ -1,0 +1,12 @@
+---
+title: Open File Fast 0.9.1
+tags: netbeans, off
+
+layout: post
+---
+
+Here is a quick update for Open File Fast plugin. 
+
+I've noticed (and also got some feedback about it in anouncement comments) that switching projects when OFF is installed is slower than without plugin and Joe Rafaniello who is using it noticed some problems when using OFF with big projects. After a little investigation (with Joe's help) it appeared that events about project switching which OFF uses for reindexing project files are being sent by Netbeans in the UI thread and this was the cause of the slowdown. 
+
+I've moved indexing into separate thread and this solved the problem. So here is improved OFF: "off-netbeans-0.9.1.nbm":http://counter.sickill.net/?f=http://sickill.net/assets/off-netbeans-0.9.1.nbm. 

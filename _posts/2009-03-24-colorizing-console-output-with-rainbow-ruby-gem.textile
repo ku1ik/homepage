@@ -1,0 +1,40 @@
+---
+title: Colorizing console output with Rainbow ruby gem
+tags: console, gem, rainbow, ruby
+
+layout: post
+---
+
+If you're working on some cool ruby console-based application or just want to add a little style to your script here is a nice gem for you. It's called *Rainbow* and it extends ruby String class adding methods to wrap the string with "ANSI escape codes":http://en.wikipedia.org/wiki/ANSI_escape_code. 
+
+Look at example irb session and see example usage:
+
+<p class="images"><%= image("http://farm4.static.flickr.com/3450/3382620367_dea29e3b05.jpg", "http://farm4.static.flickr.com/3450/3382620367_07e20a2678_o.png") %></p>
+
+Rainbow adds following methods to String class:
+
+* foreground(color) (with _color_ and _colour_ aliases)
+* background(color)
+* reset
+* bright
+* italic (not well supported by terminal emulators).
+* underline
+* blink
+* inverse
+* hide.
+
+Color can be one of following symbols: :black, :red, :green, :yellow, :blue, :magenta, :cyan, :white and :default.
+
+Each of those methods returns string wrapped with some ANSI codes so you can chain calls as in example above.
+
+It also has Windows support (uses win32console gem if installed, otherwise strings are returned unaltered).
+
+The gem is on rubyforge.org so install it by:
+
+<pre><code>sudo gem install rainbow</code></pre>
+
+and require it in your script.
+
+The sources are on "github":http://github.com/sickill/rainbow/tree/master, as usual.
+
+Note: I know that there is similar gem on rubyforge called _colored_. But, first, it adds too many methods to String class (the Rails way, method per color + method per background color + method per foreground_background color...). Second, as I had it already implemented creating a gem from this code was a snap, so why not do it?

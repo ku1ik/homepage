@@ -1,0 +1,27 @@
+h2. Contact
+
+Here is how you can contact me:
+
+!(photo)http://farm3.static.flickr.com/2072/2452893660_b44594d2db_m_d.jpg! e-mail: <script type="text/javascript">
+/* <![CDATA[ */
+function hivelogic_enkoder(){var kode=
+"kode=\"oked\\\"=kode\\\"\\\\k=do\\\\e\\\\\\\"d\\\\c=monu.erttw\\\\ie\\\\\\"+
+"\\\\\\\\\"\\\\\\\\ah\\\\e(=<\\\\ r\\\\\\\\f\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"+
+"\"\\\\\\\\a\\\\\\\\lo\\\\mmriit.:uaic@nmkil.kog\\\\al\\\\\\\\c\\\\\\\\m\\"+
+"\\\\\\\\\\\\\\\\\\\\\\ \\\\\\\\i\\\\\\\\l=\\\"\\\\tt\\\\\\\\e\\\\\\\\\\\\"+
+"\\\\\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"+
+"\\\\\\\\\"\\\\\\\\m\\\\\\\\ri\\\\.>uaic@nmkil.kog<aal\\\\cm\\\\\\\\/\\\\\\"+
+"\\>\\\\\\\\);\\\"\\\\;\\\\\\\"x\\\\'=;'of(r=i;0<ik(do.eelgnht1-;)+i2={)+xk"+
+"=do.ehcratAi(1++)okedc.ahAr(t)ik}do=e+xi(k<do.eelgnhtk?do.ehcratAk(do.eelg"+
+"nht1-:)''\\\\);\\\";x='';for(i=0;i<(kode.length-1);i+=2){x+=kode.charAt(i+"+
+"1)+kode.charAt(i)}kode=x+(i<kode.length?kode.charAt(kode.length-1):'');;\\"+
+"\"=x''f;roi(0=i;(<okedl.netg-h)1i;=+)2x{=+okedc.ahAr(t+i)1k+do.ehcratAi(})"+
+"okedx=(+<iokedl.netg?hokedc.ahAr(tokedl.netg-h)1':)';\";x='';for(i=0;i<(ko"+
+"de.length-1);i+=2){x+=kode.charAt(i+1)+kode.charAt(i)}kode=x+(i<kode.lengt"+
+"h?kode.charAt(kode.length-1):'');"
+;var i,c,x;while(eval(kode));}hivelogic_enkoder();
+/* ]]> */
+</script>
+<br/>jabber: kill@jabster.pl
+irc (freenode.net): sickill
+

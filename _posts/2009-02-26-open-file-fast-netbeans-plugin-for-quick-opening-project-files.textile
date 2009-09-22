@@ -1,0 +1,57 @@
+---
+title: Open File Fast - Netbeans plugin for quick opening project files
+tags: netbeans, off, textmate
+
+layout: post
+---
+
+Textmate has nice feature which is a real timesaver. It's quick open file dialog. You can type only several characters of filename you are searching for and you get list of all files matching your pattern. When you are looking for FooBar.java you can type _fbj_ and you will find it. It really helps navigating through the project (especially bigger ones).
+
+So... let me introduce my new Netbeans plugin: *Open File Fast* (tm). It was inspired by mentioned Textmate's functionality but has a lot more features. Netbeans already has some Go-To-File dialog but it isn't too flexible and it requires you to type exact part of file's name. 
+
+Here are the key features of Open File Fast:
+* quick finding and opening any file from selected project
+* two matching modes: 
+** _smart_ (like in Textmate, matching filenames must contain all typed characters, they can be separated by other characters)
+** _exact_ (like Netbeans' Go-To-File, matching filenames must contain exact phrase)
+* matching from start of filename or anywhere in filename
+* support for ==*== wildcard in _exact_ mode
+* changing minimum entered pattern length needed for searching (default: 3)
+* changing delay (time from last keystroke) after which searching starts (default: 300ms)
+* optional cleaning of search input field when O-F-F window opens
+* hiding files you don't work on (matching specified regular expresions) from results
+* moving less important files (matching specified regular expresions) to the bottom of results list
+* results sorted by:
+** file popularity (files opened frequently at the top of list)
+** match accuracy (distance between characters from search phrase in matched filenames)
+* opening multiple files at once (selected with ctrl/shift + mouse)
+
+Let's see how it look in action. Invoke O-F-F from Netbeans' _Navigate_ menu (I recommend creating a keyboard shortcut for it in _Tools/Options/Keymap/Project_, I like ctrl+T). For example when you type _user_ you will get following results:
+
+<p class="images"><%= image("http://farm4.static.flickr.com/3624/3310658511_ef5bc0f1ba_m.jpg", "http://farm4.static.flickr.com/3624/3310658511_714139020a_o.png") %></p>
+
+But what if you want to open <em>users_helper.rb</em> file? Just type _ush_ and you will find it!
+
+<p class="images"><%= image("http://farm4.static.flickr.com/3339/3310658593_b6e7962299_m.jpg", "http://farm4.static.flickr.com/3339/3310658593_8c65b1f5bf_o.png") %></p>
+
+If you know that something you need is in some javascript file you can show all js files by entering _*.js_.
+
+<p class="images"><%= image("http://farm4.static.flickr.com/3581/3310658771_3cb70c5cb2_m.jpg", "http://farm4.static.flickr.com/3581/3310658771_ce4c88b990_o.png") %></p>
+
+When you want to narrow down your search to specific directory just type some parts of directories' names separated by slashes. For example when looking for files in directory _app/models_ (under project root) type _a/m/_. 
+
+<p class="images"><%= image("http://farm4.static.flickr.com/3658/3311489548_a6449ce2d9_m.jpg", "http://farm4.static.flickr.com/3658/3311489548_de299abf9d_o.png") %><%= image("http://farm4.static.flickr.com/3350/3311489598_945ab8d6ba_m.jpg", "http://farm4.static.flickr.com/3350/3311489598_187ca4f7ff_o.png") %></p>
+
+Matching algorithm by default starts searching for pattern at the start of filename, but if you want to search for pattern anywhere in filename (like in Textmate) you can change it in options. Here we are searching for _proj_ and the results list contains also filenames not starting with _proj_.
+
+<p class="images"><%= image("http://farm4.static.flickr.com/3424/3310659061_ba12c6c208_m.jpg", "http://farm4.static.flickr.com/3424/3310659061_686ab1532b_o.png") %></p>
+
+Open File Fast can be set up to your own preferences and to match your own workflow. You can configure it under _Open File Fast_ tab in Netbeans' _Miscellaneous_ options:
+
+<p class="images"><%= image("http://farm4.static.flickr.com/3567/3311489750_d487b3da51_m.jpg", "http://farm4.static.flickr.com/3567/3311489750_306e760e2e_o.png") %></p>
+
+Grab it here:
+"off-netbeans-0.9.3.nbm":http://counter.sickill.net/?f=http://sickill.net/assets/off-netbeans-0.9.3.nbm. If you want to help or just look into sources they're on "github":http://github.com/sickill/off-plugin/tree/master .
+This is the first public version of this plugin so it could have some bugs, however we've been using it for a while now with my workmates and nothing exploded yet :)
+
+*Update:* for most recent version of plugin go to "OFF project page":/projects/off .

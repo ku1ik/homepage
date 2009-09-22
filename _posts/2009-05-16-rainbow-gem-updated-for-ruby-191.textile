@@ -1,0 +1,8 @@
+---
+title: Rainbow gem updated for Ruby 1.9.1
+tags: gem, rainbow, ruby
+
+layout: post
+---
+
+Thanks to Chad from "Spicycode":http://spicycode.com/ my rainbow gem now supports Ruby 1.9.1 (and it's backwards compatible with Ruby 1.8.x). It doesn't provide any new features so there is no need for upgrade for Ruby 1.8.x users. I've released new version 1.0.2 at "rubyforge":http://rubyforge.org/projects/rainbow/. 
