@@ -1,4 +1,10 @@
-h2. Contact
+---
+title: Contact
+
+layout: default
+---
+
+h2. {{ page.title }}
 
 Here is how you can contact me:
 

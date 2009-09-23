@@ -1,0 +1,16 @@
+---
+title: My projects
+
+layout: default
+----
+
+h2. {{ page.title }}
+
+<div class="projects">
+
+{% assign id="off" %}
+{% assign name="Open File Fast" %}
+{% assign desc="Plugin for Netbeans IDE 6.5+ allowing for quick finding and opening files in your project." %}
+{% include project.html %}
+
+</div>

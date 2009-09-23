@@ -1,4 +1,9 @@
-h2. About Me
+---
+title: About Me
+layout: default
+---
+
+h2. {{ page.title }}
 
 My name is Marcin Kulik.
 

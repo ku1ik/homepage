@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Sickill.net - <%= @title || "Home" %></title>
+  <title>Sickill.net - {{ page.title }}</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="description" content="<%= @title || "Marcin Kulik's tech stuff" %>" />
-  <meta name="keywords" content="<%= (["marcin kulik", "mkulik", "sickill", "blog"] + (@keywords || [])).uniq.join(", ") %>" />
+  <meta name="description" content="{{ page.title }}" />
+  <meta name="keywords" content="marcin kulik, mkulik, sickill, blog, {{ page.tags }}" />
   <link rel="alternate" type="application/atom+xml" title="Atom" href="http://feeds2.feedburner.com/SickillNet" />
   <link rel="stylesheet" href="/css/reset.css" type="text/css" />
   <link rel="stylesheet" href="/css/layout.css" type="text/css" />
@@ -27,17 +27,17 @@
     </div>
     <div id="tabs" class="tabs">
       <ul>
-        <li><%= link_to("Blog", "/") %></li>
-        <li><%= link_to("My projects", "/projects") %></li>
-        <li><%= link_to("About me", "/about-me") %></li>
-        <li><%= link_to("Contact", "/contact") %></li>
+        <li><a href="/">Blog</a></li>
+        <li><a href="/projects.html">My projects</a></li>
+        <li><a href="/about-me.html">About me</a></li>
+        <li><a href="/contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
   <div id="page">
     <div id="content">
       <div style="height: 350px; width: 0px; visible: 0; float: left;"></div>
-      <%= yield %>
+      {{ content }}
     </div>
     <div id="sidebar">
       <!-- <div class="content_box">
@@ -45,17 +45,17 @@
       </div> -->
       <div class="content_box menu">
         <p>
-          <%= link_to("RSS Feed", "http://feeds2.feedburner.com/SickillNet", :class => "feed") %>
+          <a href="http://feeds2.feedburner.com/SickillNet" class="feed">RSS Feed</a>
         </p>
         <p>
-          <%= link_to("Twitter", "http://www.twitter.com/sickill", :class => "twitter") %>
+          <a href="http://www.twitter.com/sickill" class="twitter">Twitter</a>
         </p>
       </div>
       <div class="content_box menu">
-        <%= partial :archives %>
+        {% include archives.html %}
       </div>
       <div class="content_box menu">
-        <%= partial :tags %>
+        {% include tags.html %}
       </div>
     </div>
     <br style="clear:both;" />

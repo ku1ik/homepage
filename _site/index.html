@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Sickill.net - Home</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Home" />
+  <meta name="keywords" content="marcin kulik, mkulik, sickill, blog, " />
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="http://feeds2.feedburner.com/SickillNet" />
+  <link rel="stylesheet" href="/css/reset.css" type="text/css" />
+  <link rel="stylesheet" href="/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/css/sickill.css" type="text/css" />
+  <link rel="stylesheet" href="/css/jquery.lightbox-0.5.css" type="text/css" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="openid.server" href="http://www.myopenid.com/server" />
+  <link rel="openid.delegate" href="http://sickill.myopenid.com/" />
+  <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=sickill.myopenid.com" />
+  <script type="text/javascript" src="/javascripts/jquery-1.2.6.min.js"></script>
+  <script type="text/javascript" src="/javascripts/sickill.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery.lightbox-0.5.pack.js"></script>
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <div class="logo">
+      <a href="/">sickill.net</a><br/>
+      Marcin Kulik's Home Page
+    </div>
+    <div id="tabs" class="tabs">
+      <ul>
+        <li><a href="/">Blog</a></li>
+        <li><a href="/projects.html">My projects</a></li>
+        <li><a href="/about-me.html">About me</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="page">
+    <div id="content">
+      <div style="height: 350px; width: 0px; visible: 0; float: left;"></div>
+      
+
+  <div class="article">
+  <h2 class="article-title"><a href="/2009/07/25/open-file-fast-0-9-4-released-for-netbeans-and-jedit.html">Open File Fast 0.9.4 released for Netbeans and JEdit</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+  <br class="clear" />
+  <div class="article-content">
+    <p>Here we go again. Open File Fast 0.9.4 has just been released into the wild. And there is big news: with this release I&#8217;m introducing Open File Fast for JEdit!</p>
+<p>I&#8217;ve spent some time refactoring <span class="caps">OFF</span> code, extracting search functionality into reusable module and cleaning up here and there. The result is the core functionality is now being used by Netbeans plugin as well as by JEdit plugin. They both share search engine, search dialog and options panel. Thanks to that I&#8217;ll be able to release <span class="caps">OFF</span> for both platforms at the same time without any additional platform specific work (theoretically of course).</p>
+<p>Besides all of above here are the changes for this release:</p>
+<ul>
+	<li>underscores at the beginning of filenames are ignored (when searching for _foo.html.erb enter just foo)</li>
+	<li>masks in options panel (hide files / move files to bottom of the results) have been changed from regular expression format to wildcard format &#8211; just use &#8216;*&#8217; as replacement for string of any length</li>
+	<li>added indexing status indicator to search dialog.</li>
+</ul>
+<p>Netbeans <span class="caps">NBM</span> package: <a href="http://counter.sickill.net?f=http://sickill.net/assets/off-netbeans-0.9.4.nbm">off-netbeans-0.9.4.nbm</a><br />
+JEdit jar file: <a href="http://counter.sickill.net?f=http://sickill.net/assets/off-jedit-0.9.4.jar">off-jedit-0.9.4.jar</a> (requires JEdit 4.3pre16 and ProjectViewer 2.1.3.7)</p>
+  </div>
+  
+    <a href="/2009/07/25/open-file-fast-0-9-4-released-for-netbeans-and-jedit.html#disqus_thread">View Comments</a>
+  
+</div>
+
+
+  <div class="article">
+  <h2 class="article-title"><a href="/2009/07/25/lesscss-goodies.html">LessCSS goodies</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+  <br class="clear" />
+  <div class="article-content">
+    <p>If you haven&#8217;t heard about LessCSS then <a href="http://lesscss.org/">check it out</a>, really cool solution for writing css code in concise way. I&#8217;m planning to use it in some of my projects (and probably for this blog&#8217;s styles) and I&#8217;ve created two tools which could ease my work with LessCSS.</p>
+<p>First tool, <strong>css2less</strong>, is <span class="caps">CSS</span>-to-LessCSS converter. Of course it can&#8217;t use all of LessCSS features because only programmer knows where to use variables and other stuff properly for specific project. However what it can do is to find all rules that can be nested and outputs them for given css file.</p>
+<p>Grab it from <a href="http://github.com/sickill/css2less/tree/master">github</a> and use like that:</p>
+<pre><code>ruby css2less.rb my.css &gt; my.less</code></pre>
+<p>You will get .less file with all styles from original .css file but with nested rules notation. It&#8217;s a good start for further tweaking, ie adding variables.</p>
+<p>Second tool, <strong>rack-lesscss</strong>, is a <a href="http://rack.rubyforge.org/">Rack</a> middleware which converts .less files into .css files on the fly during request. It&#8217;s main purpose is to ease development stage when you change your .less files frequently. With rack-lesscss middleware enabled you don&#8217;t need to compile .less files by hand after every change. LessCSS compiler has an option to watch for changes in .less file and automatically recompiles it but you need to remember to run compiler in watch mode for every stylesheet every time you start development session. There are also at least two Rails plugins which nicely integrates LessCSS into the app but this middleware can be used with Rails as well as with other ruby web frameworks like Merb or Sinatra.</p>
+<p>Install gem:</p>
+<pre><code>sudo gem install --source http://gems.github.com sickill-rack-lesscss</code></pre>
+<p>or grab it from <a href="http://github.com/sickill/rack-lesscss/tree/master">github</a>.</p>
+<p>Enable by adding following to your rackup file (config.ru, or config/rack.rb in Merb app):</p>
+<pre><code>require 'rack-lesscss'
+use Rack::LessCss, :less_path =&gt; File.join(APP_ROOT, "public", "css"), :css_route =&gt; "/css"</code></pre>
+<p>Above code will enable on-the-fly .less files compilation for all requests matching <em>/css/*.css</em>.</p>
+<p>It accepts two arguments:</p>
+<ul>
+	<li><em>:less_path</em> &#8211; directory where source .less files are stored (required)</li>
+	<li><em>:css_route</em> &#8211; route which this middleware will handle (optional, default is <em>/stylesheets</em>)</li>
+</ul>
+<p>And don&#8217;t use it on production for obvious reason :) It&#8217;s meant to be used for development only.</p>
+  </div>
+  
+    <a href="/2009/07/25/lesscss-goodies.html#disqus_thread">View Comments</a>
+  
+</div>
+
+
+  <div class="article">
+  <h2 class="article-title"><a href="/2009/07/11/archlinux-nginx-passenger.html">Archlinux + Nginx + Passenger</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+  <br class="clear" />
+  <div class="article-content">
+    <p><strong><span class="caps">UPDATE</span></strong>: <em>I&#8217;ve added this package to <a href="http://aur.archlinux.org"><span class="caps">AUR</span></a>. You can grab it <a href="http://aur.archlinux.org/packages.php?ID=28185">here</a> if you prefer to build it from <span class="caps">AUR</span>. Note: it automatically builds passenger&#8217;s nginx module so step 2. is not needed for it, you only need to have passenger gem installed.</em></p>
+<p>If someone needs to setup <a href="http://wiki.nginx.org">Nginx</a> web server with <a href="http://www.modrails.com/">Passenger</a> support quick on <a href="http://archlinux.org/">Archlinux</a> here are few simple steps to get it running in minutes.</p>
+<p>1. Make sure you have the latest Passenger gem installed:</p>
+<pre><code>sudo gem install passenger</code></pre>
+<p>2. Compile Passenger module for Nginx:</p>
+<pre><code>cd `passenger-config --root`; sudo rake nginx</code></pre>
+<p>3. Download this <a href="http://counter.sickill.net?f=http://sickill.net/assets/archlinux-nginx-passenger.tgz"><span class="caps">PKGBUILD</span></a> (modified <span class="caps">PKGBUILD</span> of nginx-0.7.61-1 from community repository with passenger module added)</p>
+<p>4. Unpack and build package (if running as non-root be sure you have fakeroot package installed):</p>
+<pre><code>tar xf archlinux-nginx-passenger.tgz
+cd nginx
+makepkg</code></pre>
+<p>5. Install package:</p>
+<pre><code>sudo pacman -U nginx-0.7.61-1-i686.pkg.tar.gz</code></pre>
+<p>6. Set Passenger&#8217;s root directory in /etc/nginx/conf/nginx.conf:</p>
+<pre><code>http {
+  ...
+  passenger_root /usr/lib/ruby/gems/1.8/gems/passenger-2.2.4;
+  ...
+}
+</code></pre>
+<p>7. Enable Passenger in your vhost:</p>
+<pre><code>server {
+  listen 80;
+  server_name foo.bar.net;
+  root /var/www/foo.bar.net/public;
+  passenger_enabled on;
+}
+</code></pre>
+<p>Restart nginx and that&#8217;s it. Now your Arch can serve ruby apps under Passenger.</p>
+<p>Kudos for <a href="http://phusion.nl">Phusion</a> guys for creating such simple and really good working solution for hassle-free deployment!</p>
+  </div>
+  
+    <a href="/2009/07/11/archlinux-nginx-passenger.html#disqus_thread">View Comments</a>
+  
+</div>
+
+
+
+<h2 class="previously">Previously on sickill.net:</h2>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/06/25/rubytime-plasmoid.html">Rubytime plasmoid</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/06/21/funny-marketing-bullshit.html">Funny marketing bullshit</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/06/20/some-old-stuff-dece.html">Some old stuff - DeCe</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/06/20/dead-simple-background-jobs-without-workers.html">Dead simple background jobs without workers</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/06/20/battle-of-superheroes-html-canvas-element-experiment.html">Battle of superheroes - HTML Canvas element experiment</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/06/01/rack-middleware-showing-git-or-svn-revision.html">Rack middleware showing git or svn revision</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/05/21/open-file-fast-0-9-3.html">Open File Fast 0.9.3</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/05/16/rainbow-gem-updated-for-ruby-191.html">Rainbow gem updated for Ruby 1.9.1</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/05/10/rack-middleware-using-html-tidy.html">Rack middleware using HTML Tidy</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/05/04/open-file-fast-featured-on-netbeans-website.html">Open File Fast featured on Netbeans website</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/04/02/improved-ruby-mode-for-jedit.html">Improved ruby mode for JEdit</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/03/24/colorizing-console-output-with-rainbow-ruby-gem.html">Colorizing console output with Rainbow ruby gem</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/03/10/open-file-fast-0-9-1.html">Open File Fast 0.9.1</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/02/26/open-file-fast-netbeans-plugin-for-quick-opening-project-files.html">Open File Fast - Netbeans plugin for quick opening project files</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+  <div class="article-preview">
+  <h2 class="article-title"><a href="/2009/01/20/textmate-to-jedit-colour-theme-converter.html">Textmate to JEdit Colour Theme Converter</a></h2><!-- by <strong>Sickill</strong>  -->
+<div class="article-info">
+  Posted on ,
+  tagged with ...
+</div>
+
+</div>
+
+
+    </div>
+    <div id="sidebar">
+      <!-- <div class="content_box">
+        <img src="/images/sickill-avatar-64.png" class="avatar" />
+      </div> -->
+      <div class="content_box menu">
+        <p>
+          <a href="http://feeds2.feedburner.com/SickillNet" class="feed">RSS Feed</a>
+        </p>
+        <p>
+          <a href="http://www.twitter.com/sickill" class="twitter">Twitter</a>
+        </p>
+      </div>
+      <div class="content_box menu">
+        Included file 'archives.html' not found in _includes directory
+      </div>
+      <div class="content_box menu">
+        Included file 'tags.html' not found in _includes directory
+      </div>
+    </div>
+    <br style="clear:both;" />
+  </div>
+  <div id="footer">
+    <span class="powered">Powered by <a href="http://www.sinatrarb.com/">Sinatra</a>, <a href="http://disqus.com">Disqus</a> and <a href="http://nginx.net/">Nginx</a></span>
+    &nbsp; <span class="powered">Styled by Sickill, <a href="http://www.flickr.com/photos/tristanf/3065740880/">background</a> by <a href="http://www.cookinrelaxin.com/">Tristan Ferne</a></span>
+  </div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5523452-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
