@@ -14,15 +14,26 @@ preprocess do
   
   # create tag pages
   tags_and_items(items).keys.each do |tag|
-    content = "<h2>Posts tagged with '#{tag}'</h2>\n\n"
+    content = "<h2>Posts tagged with '#{tag}':</h2>\n\n"
     content << %{<% articles_tagged_with('#{tag}').each do |post| %>
     <%= render_post post, :comments => false %>
   <% end %>}
     items << Nanoc3::Item.new(content, {}, "/blog/tag/#{tag}/")
   end
+  
+  # create archive pages
+  months_and_items(items).each do |date, posts|
+    content = "<h2>Archive for #{date.year}/#{date.month}:</h2>\n\n"
+    items << Nanoc3::Item.new(content, {}, "/blog/#{date.year}/#{date.month}/")
+  end
 end
 
 # COMPILATION
+
+compile %r(^/blog/\d{4}-\d{2}/) do
+  filter :erb
+  layout 'default'
+end
 
 compile '/blog/20*' do
   filter :erb
