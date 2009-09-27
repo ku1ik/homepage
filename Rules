@@ -9,11 +9,17 @@ preprocess do
       # item[:created_at] = Time.parse(item[:created_at])
     end
   end
+  tag = "console"
+  content = "<h2>Posts tagged with '#{tag}'</h2>\n\n"
+  content << %{<% articles[0..2].each do |post| %>
+  <%= render_post articles[0], :comments => false %>
+<% end %>}
+  items << Nanoc3::Item.new(content, {}, "/blog/tag/#{tag}/")
 end
 
 # COMPILATION
 
-compile '/blog/*' do
+compile '/blog/20*' do
   filter :erb
   filter :redcloth
   layout 'post'
@@ -25,6 +31,9 @@ compile %r(^/(about-me|contact|projects)) do
   layout 'default'
 end
 
+# compile '/blog/tag/*' do
+# end
+
 compile '*' do
   filter :erb
   layout 'default'
@@ -32,7 +41,7 @@ end
 
 # ROUTING
 
-route '/blog/*' do
+route '/blog/20*' do
   item.identifier[0..-2].gsub(/(\d{4})-(\d{2})-(\d{2})-(.*)/, '\1/\2/\3/\4') + '.html'
 end
 
