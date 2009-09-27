@@ -1,9 +1,7 @@
 ---
-title: About Me
-layout: default
+title: About me
 ---
-
-h2. {{ page.title }}
+h2. <%= @item[:title] %>
 
 My name is Marcin Kulik.
 

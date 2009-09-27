@@ -1,10 +1,12 @@
+---
+---
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Sickill.net - {{ page.title }}</title>
+  <title>Sickill.net - <%= @item[:title] %></title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="description" content="{{ page.title }}" />
-  <meta name="keywords" content="marcin kulik, mkulik, sickill, blog, {{ page.tags }}" />
+  <meta name="description" content="<%= @item[:title] %>" />
+  <meta name="keywords" content="marcin kulik, mkulik, sickill, blog, <%= @item[:tags] %>" />
   <link rel="alternate" type="application/atom+xml" title="Atom" href="http://feeds2.feedburner.com/SickillNet" />
   <link rel="stylesheet" href="/css/reset.css" type="text/css" />
   <link rel="stylesheet" href="/css/layout.css" type="text/css" />
@@ -22,22 +24,22 @@
 <div id="container">
   <div id="header">
     <div class="logo">
-      <a href="/">sickill.net</a><br/>
+      <%= link_to 'sickill.net', '/' %><br/>
       Marcin Kulik's Home Page
     </div>
     <div id="tabs" class="tabs">
       <ul>
-        <li><a href="/">Blog</a></li>
-        <li><a href="/projects.html">My projects</a></li>
-        <li><a href="/about-me.html">About me</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><%= link_to 'Blog', '/' %></li>
+        <li><%= link_to 'My projects', item('/projects/') %></li>
+        <li><%= link_to 'About me', item('/about-me/') %></li>
+        <li><%= link_to 'Contact', item('/contact/') %></li>
       </ul>
     </div>
   </div>
   <div id="page">
     <div id="content">
       <div style="height: 350px; width: 0px; visible: 0; float: left;"></div>
-      {{ content }}
+      <%= yield %>
     </div>
     <div id="sidebar">
       <!-- <div class="content_box">
@@ -52,27 +54,19 @@
         </p>
       </div>
       <div class="content_box menu">
-        {% include archives.html %}
+        <%= render '_archives' %>
       </div>
       <div class="content_box menu">
-        {% include tags.html %}
+        <%= render '_tags' %>
       </div>
     </div>
     <br style="clear:both;" />
   </div>
   <div id="footer">
-    <span class="powered">Powered by <a href="http://www.sinatrarb.com/">Sinatra</a>, <a href="http://disqus.com">Disqus</a> and <a href="http://nginx.net/">Nginx</a></span>
+    <span class="powered">Powered by <a href="http://nanoc.stoneship.org/">nanoc</a>, <a href="http://disqus.com">Disqus</a> and <a href="http://nginx.net/">Nginx</a></span>
     &nbsp; <span class="powered">Styled by Sickill, <a href="http://www.flickr.com/photos/tristanf/3065740880/">background</a> by <a href="http://www.cookinrelaxin.com/">Tristan Ferne</a></span>
   </div>
 </div>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-5523452-3");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+<%= render "_analytics" %>
 </body>
 </html>

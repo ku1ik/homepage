@@ -1,0 +1,8 @@
+---
+---
+<strong>Tags</strong>
+<ul>
+<% [].each do |tag| %>
+  <li><%= link_to tag.name, "/blog/tag/#{tag.name}" %> <span class="tag_popularity">(<%= tag.posts_count %>)</span></li>
+<% end %>
+</ul>

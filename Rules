@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+require 'time'
+
+preprocess do
+  items.each do |item|
+    if item.identifier =~ /^\/blog\//
+      item[:kind] = 'article' 
+      item[:created_at] = item.identifier[/\d{4}-\d{2}-\d{2}/] if item[:created_at].nil?
+      # item[:created_at] = Time.parse(item[:created_at])
+    end
+  end
+end
+
+# COMPILATION
+
+compile '/blog/*' do
+  filter :erb
+  filter :redcloth
+  layout 'post'
+end
+
+compile %r(^/(about-me|contact|projects)) do
+  filter :erb
+  filter :redcloth
+  layout 'default'
+end
+
+compile '*' do
+  filter :erb
+  layout 'default'
+end
+
+# ROUTING
+
+route '/blog/*' do
+  item.identifier[0..-2].gsub(/(\d{4})-(\d{2})-(\d{2})-(.*)/, '\1/\2/\3/\4') + '.html'
+end
+
+route '*' do
+  item.identifier + 'index.html'
+end
+
+# LAYOUTING
+
+layout '*', :erb

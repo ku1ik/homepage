@@ -1,0 +1,7 @@
+---
+---
+<% render "default" do %>
+  <% render_post @item, :comments => true do %>
+    <%= yield %>
+  <% end %>
+<% end %>

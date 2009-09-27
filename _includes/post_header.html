@@ -1,5 +1,0 @@
-<h2 class="article-title"><a href="{{ post.url }}">{{ post.title }}</a></h2><!-- by <strong>Sickill</strong>  -->
-<div class="article-info">
-  Posted on {{ post.published_at.strftime("%d %b %Y") }},
-  tagged with ...{% comment %}<%= post.tags.all(:order => [:name]).map { |t| link_to(t.name, "/blog/tag/#{t.name}") }.join(", ") %>{% endcomment %}
-</div>
