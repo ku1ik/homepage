@@ -1,3 +1,9 @@
+module Nanoc3::Helpers::Blogging
+  def articles
+    @items.select { |item| item[:kind] == 'article' && !item[:draft] }
+  end
+end
+
 include Nanoc3::Helpers::Blogging
 include Nanoc3::Helpers::Rendering
 include Nanoc3::Helpers::LinkTo
@@ -66,4 +72,11 @@ end
 
 def articles_tagged_with(tag)
   sorted_articles.select { |a| a.tags.include?(tag) }
+end
+
+def months_and_items
+  articles.group_by do |p|
+    time = Time.parse(p[:created_at])
+    Date.new(time.year, time.month)
+  end
 end
