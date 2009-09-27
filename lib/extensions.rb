@@ -1,6 +1,6 @@
 class Nanoc3::Item
   def tags
-    self[:tags] && self[:tags].split(",").sort.map { |t| t.strip } || []
+    self[:tags] && self[:tags].split(",").map { |t| t.strip }.sort || []
   end
   
   def path
