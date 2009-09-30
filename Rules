@@ -30,12 +30,12 @@ end
 
 # COMPILATION
 
-compile %r(^/blog/\d{4}-\d{2}/) do
+compile %r(^/blog/\d{4}/\d{2}/$) do
   filter :erb
   layout 'default'
 end
 
-compile '/blog/20*' do
+compile %r(^/blog/\d{4}-\d{2}-\d{2}-/.+/) do
   filter :erb
   filter :redcloth
   layout 'post'
@@ -54,8 +54,8 @@ end
 
 # ROUTING
 
-route '/blog/20*' do
-  item.identifier[0..-2].gsub(/(\d{4})-(\d{2})-(\d{2})-(.*)/, '\1/\2/\3/\4') + '.html'
+route %r(^/blog/\d{4}-\d{2}-\d{2}-.+/) do
+  item.identifier[0..-2].gsub(/(\d{4})-(\d{2})-(\d{2})-(.+)/, '\1/\2/\3/\4') + '.html'
 end
 
 route '*' do
