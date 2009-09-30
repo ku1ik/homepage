@@ -35,7 +35,7 @@ compile %r(^/blog/\d{4}/\d{2}/$) do
   layout 'default'
 end
 
-compile %r(^/blog/\d{4}-\d{2}-\d{2}-/.+/) do
+compile %r(^/blog/\d{4}-\d{2}-\d{2}-.+/) do
   filter :erb
   filter :redcloth
   layout 'post'
