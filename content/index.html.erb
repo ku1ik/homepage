@@ -3,12 +3,6 @@ filters:
 - :erb
 ---
 <% sorted_articles[0..2].each do |post| %>
-  <%# render "_post", :post => post, :comments => false %>
   <%= render_post post %>
 <% end %>
 
-<h2 class="previously">Previously on sickill.net:</h2>
-
-<% sorted_articles[3..-1].each do |post| %>
-  <%= render "_post_preview", :post => post %>
-<% end %>

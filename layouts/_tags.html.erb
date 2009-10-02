@@ -1,9 +1,8 @@
 ---
 ---
-<strong>Tags</strong>
 <ul>
 <% tai = tags_and_items %>
-<% tai.keys.sort.each do |tag| %>
+<% tai.keys.sort_by { |t| -tai[t].size }[0..14].sort.each do |tag| %>
   <li><%= link_to tag, "/blog/tag/#{tag}" %> <span class="tag_popularity">(<%= tai[tag].size %>)</span></li>
 <% end %>
 </ul>

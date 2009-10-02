@@ -26,28 +26,28 @@
       <%= link_to 'sickill.net', '/' %><br/>
       Marcin Kulik's Home Page
     </div>
-    <div id="nav">
-      <ul>
-        <li><%= link_to 'Blog', '/' %></li>
-        <li><%= link_to 'My projects', item('/projects/') %></li>
-        <li><%= link_to 'About me', item('/about-me/') %></li>
-        <li><%= link_to 'Contact', item('/contact/') %></li>
-      </ul>
-    </div>
   </div>
   <div id="page">
     <div id="content">
       <%= yield %>
     </div>
     <div id="sidebar">
+      <h2>Info</h2>
+      <ul>
+        <li><%= link_to 'About me', item('/about-me/') %></li>
+        <li><%= link_to 'My projects', item('/projects/') %></li>
+        <li><%= link_to 'Contact', item('/contact/') %></li>
+      </ul>
+
       <h2>Follow me if you dare</h2>
       <ul>
         <li><a href="http://feeds2.feedburner.com/SickillNet" class="feed">RSS Feed</a></li>
         <li><a href="http://www.twitter.com/sickill" class="twitter">Twitter</a></li>
+        <li><%= link_to 'Github', 'http://github.com/sickill', :class => 'github' %></li>
       </ul>
-      
+
       <h2>Recent posts</h2>
-      <%# render '_recent_posts' %>
+      <%= render '_recent_posts' %>
       
       <h2>Monthly archives</h2>
       <%= render '_archives' %>
