@@ -1,9 +1,9 @@
 def render_post_header(post)
   html = ""
-  html << %(<h2 class="article-title">#{link_to post[:title], post.path}</h2><!-- by <strong>Sickill</strong>  -->)
+  html << %(<h2>#{link_to post[:title], post.path}</h2>)
   html << %(<div class="article-info">)
-  html << %(Posted on #{post.created_at.strftime("%d %b %Y")}, )
-  html << %(tagged with #{post.tags.map { |t| link_to(t, "/blog/tag/#{t}") }.join(", ")})
+  html << %(-- posted on #{post.created_at.strftime("%d %b %Y")}, )
+  html << %(tagged with #{post.tags.map { |t| link_to(t, "/blog/tag/#{t}") }.join(", ")} --)
   html << %(</div>)
 end
 

@@ -9,4 +9,4 @@ My name is Marcin Kulik.
 I live in Cracow and I'm software engineer at "Lunar Logic Polska":http://lunarlogicpolska.com, one of Poland's largest and most experienced agile Ruby on Rails development teams.
 
 
-Want to know more about me? Check out my Curriculum Vitae or my LinkedIn profile.
+Want to know more about me? Check out my <%= link_to 'Curriculum Vitae', '#' %> or <%= link_to 'my LinkedIn profile', 'http://www.linkedin.com/in/marcinkulik' %>.
