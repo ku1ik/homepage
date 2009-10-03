@@ -6,3 +6,8 @@ task :link_assets do
     `ln -s ../assets/#{file} output/#{file}`
   end
 end
+
+desc "Compile .less"
+task :compile_less do
+    `lessc assets/css/master.less`
+end

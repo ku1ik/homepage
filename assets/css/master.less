@@ -1,12 +1,23 @@
 
+/* colors from http://kuler.adobe.com/#themeID/607478 */
+
+html, body {
+  background-color: #111;
+  color: #eee;
+}
+
 em {
   font-style: italic;
-  background-color: #EEE;
+  background-color: #222;
   padding: 1px 3px;
 }
 
 h1 {
   font-size: 18pt;
+}
+
+h1, h2, h3, #sidebar, #page, #footer {
+  font-family: 'Trebuchet MS',Calibri,Verdana,"Bitstream Vera Sans",sans-serif;
 }
 
 h2 {
@@ -18,6 +29,13 @@ p {
   margin-bottom: 20px;
 }
 
+.rounded {
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
 .clearfix {
   clear: both;
 }
@@ -27,7 +45,12 @@ p {
 }
 
 a {
-  color: #83996F;
+  color: #CBD962;
+}
+
+img.photo {
+  float: left;
+  margin-right: 15px;
 }
 
 #container {
@@ -36,33 +59,38 @@ a {
 
 #header {
   margin-bottom: 50px;
+  .logo {
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 37pt;
+      font-weight: bold;
+      font-family: Georgia;
+    }
+  }
 }
 
 #page {
-  line-height: 1.2em;
-  font-family: verdana,arial,sans-serif;
+  line-height: 1.3em;
+  /*font-family: verdana,arial,sans-serif;*/
   font-size: 10pt;
 
   ul { line-height: 1.2em }
+  h2 {
+    color: #BF2A45;
+    a { color: #BF2A45; }
+  }
 }
 
 #content {
   float: left;
   width: 800px;
-  margin-right: 25px;
+  margin-right: 50px;
 }
 
 #sidebar {
   float: left;
   width: 200px;
-
-/*
-B2A183
-83996F
-4E9468
-1E755E
-03524D
-*/
 
   ul {
     list-style-image:none;
@@ -70,6 +98,11 @@ B2A183
     list-style-type:none;
     line-height: 1.5em;
     padding-left: 0;
+    margin: 5px 0 20px;
+    a {
+      color: #60A679;
+      text-decoration: none;
+    }
   }
 
   li {
@@ -81,10 +114,30 @@ B2A183
   h2 {
     font-size: 10pt;
     font-weight: bold;
-    color: #1E755E;
+    color: #D98841;
+    margin-bottom: 5px;
   }
 }
 
 #footer {
   .clearfix;
+  font-size: 10pt;
 }
+
+pre, code {
+  font-family:'Bitstream Vera Sans Mono','Courier',monospace;
+  line-height:1.4em;
+  font-size: 9pt;
+}
+
+pre code {
+  background-color: black;
+  display:block;
+  padding:7px;
+  .rounded;
+}
+
+pre {
+  margin-bottom: 15px;
+}
+
