@@ -1,6 +1,6 @@
 module Nanoc3::Helpers::Blogging
   def articles
-    @items.select { |item| item[:kind] == 'article' && !item[:draft] }
+    (@items || items).select { |item| item[:kind] == 'article' && !item[:draft] }
   end
 end
 

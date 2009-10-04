@@ -12,22 +12,19 @@ preprocess do
   end
   
   # create tag pages
-  tags_and_items(items).keys.each do |tag|
-    content = "<h2>Posts tagged with '#{tag}':</h2>\n\n"
-    content << %{<% articles_tagged_with('#{tag}').each do |post| %>
-    <%= render_post post, :comments => false %>
-  <% end %>}
-    items << Nanoc3::Item.new(content, { :title => "Posts tagged with #{tag}" }, "/blog/tag/#{tag}/")
+  articles_by_tag.keys.each do |tag|
+    title = "Posts tagged with '#{tag}'"
+    content = "<h2>#{title}:</h2>\n\n"
+    content << %{<% articles_for_tag('#{tag}').each do |post| %><%= render_post post, :comments => false %><% end %>}
+    items << Nanoc3::Item.new(content, { :title => title }, "/blog/tag/#{tag}/")
   end
   
   # create archive pages
-  months_and_items(items).each do |date, posts|
+  articles_by_month.each do |date, _|
     month = format("%02d", date.month)
     title = "Archive for #{date.year}/#{month}"
     content = "<h2>#{title}:</h2>\n\n"
-    content << %{<% months_and_items(sorted_articles)[Date.new(#{date.year}, #{date.month})].each do |post| %>
-    <%= render_post post, :comments => false %>
-  <% end %>}
+    content << %{<% articles_for_month(Date.new(#{date.year}, #{date.month})).each do |post| %><%= render_post post, :comments => false %><% end %>}
     items << Nanoc3::Item.new(content, { :title => title }, "/blog/#{date.year}/#{month}/")
   end
 end

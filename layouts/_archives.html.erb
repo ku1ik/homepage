@@ -1,7 +1,7 @@
 ---
 ---
 <ul>
-  <% archives = months_and_items %>
+  <% archives = articles_by_month %>
   <% archives.keys.sort_by { |d| d.strftime("%Y%m") }.reverse.each do |date| %>
     <li><%= link_to date.strftime("%B %Y"), "/blog/#{date.strftime('%Y/%m')}" %> <span class="tag_popularity">(<%= archives[date].size %>)</span></li>
   <% end %>

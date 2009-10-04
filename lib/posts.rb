@@ -32,10 +32,26 @@ def render_post(post, opts={}, &blk)
   html
 end
   
-def months_and_items(items=nil)
-  @items = items unless items.nil?
-  articles.group_by do |p|
+def articles_by_month
+  sorted_articles.group_by do |p|
     time = Time.parse(p[:created_at])
     Date.new(time.year, time.month)
   end
+end
+
+def articles_for_month(date)
+  articles_by_month[date]
+end
+
+def articles_by_tag
+  sorted_articles.inject(Hash.new { |h,k| h[k] = [] }) do |acc, a|
+    a.tags.each do |t| 
+      acc[t] << a
+    end
+    acc
+  end
+end
+
+def articles_for_tag(tag)
+  sorted_articles.select { |a| a.tags.include?(tag) }
 end
