@@ -17,17 +17,18 @@ preprocess do
     content << %{<% articles_tagged_with('#{tag}').each do |post| %>
     <%= render_post post, :comments => false %>
   <% end %>}
-    items << Nanoc3::Item.new(content, {}, "/blog/tag/#{tag}/")
+    items << Nanoc3::Item.new(content, { :title => "Posts tagged with #{tag}" }, "/blog/tag/#{tag}/")
   end
   
   # create archive pages
   months_and_items(items).each do |date, posts|
     month = format("%02d", date.month)
-    content = "<h2>Archive for #{date.year}/#{month}:</h2>\n\n"
+    title = "Archive for #{date.year}/#{month}"
+    content = "<h2>#{title}:</h2>\n\n"
     content << %{<% months_and_items(sorted_articles)[Date.new(#{date.year}, #{date.month})].each do |post| %>
     <%= render_post post, :comments => false %>
   <% end %>}
-    items << Nanoc3::Item.new(content, {}, "/blog/#{date.year}/#{month}/")
+    items << Nanoc3::Item.new(content, { :title => title }, "/blog/#{date.year}/#{month}/")
   end
 end
 
