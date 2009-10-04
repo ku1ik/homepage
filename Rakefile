@@ -9,5 +9,8 @@ end
 
 desc "Compile .less"
 task :compile_less do
-    `lessc assets/css/master.less`
+  puts "Compiling .less"
+  `lessc assets/css/master.less`
 end
+
+task :deploy => [:compile_less, :"deploy:rsync"]
