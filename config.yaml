@@ -10,5 +10,5 @@ base_url: http://sickill.net
 deploy:
   default:
     dst:     "sickill.net:/var/www/sickill.net"
-    options: [ '-gpPrvzL', '--exclude=".svn"' ]
+    options: [ '-gprzLv', '--exclude=".svn"' ]
 
