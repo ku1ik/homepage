@@ -1,5 +1,6 @@
 ---
 title: Rubytime plasmoid
+created_at: 2009-06-20 13:20
 tags: kde, plasmoid, python, rubytime, widget
 
 layout: post

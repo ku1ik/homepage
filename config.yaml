@@ -5,6 +5,8 @@ data_sources:
   type: filesystem_combined
 output_dir: output
 
+base_url: http://sickill.net
+
 deploy:
   default:
     dst:     "sickill.net:/var/www/sickill.net"

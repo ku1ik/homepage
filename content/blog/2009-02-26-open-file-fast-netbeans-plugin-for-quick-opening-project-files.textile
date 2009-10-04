@@ -1,5 +1,6 @@
 ---
 title: Open File Fast - Netbeans plugin for quick opening project files
+created_at: 2009-02-26 23:36
 tags: netbeans, off, textmate
 
 layout: post

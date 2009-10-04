@@ -7,8 +7,7 @@ preprocess do
   items.each do |item|
     if item.identifier =~ /^\/blog\//
       item[:kind] = 'article' 
-      item[:created_at] = item.identifier[/\d{4}-\d{2}-\d{2}/] if item[:created_at].nil?
-      # item[:created_at] = Time.parse(item[:created_at])
+      item[:created_at] = "---" if item[:created_at].nil? #item.identifier[/\d{4}-\d{2}-\d{2}/] if item[:created_at].nil?
     end
   end
   
@@ -51,6 +50,10 @@ compile %r(^/(about-me|contact|projects)) do
   layout 'default'
 end
 
+compile '/atom/' do
+  filter :erb
+end
+
 compile '*' do
   filter :erb
   layout 'default'
@@ -60,6 +63,10 @@ end
 
 route %r(^/blog/\d{4}-\d{2}-\d{2}-.+/) do
   item.identifier[0..-2].gsub(/(\d{4})-(\d{2})-(\d{2})-(.+)/, '\1/\2/\3/\4') + '.html'
+end
+
+route '/atom/' do
+  '/atom.xml'
 end
 
 route '*' do

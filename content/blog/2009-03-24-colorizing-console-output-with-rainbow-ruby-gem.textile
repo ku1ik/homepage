@@ -1,5 +1,6 @@
 ---
 title: Colorizing console output with Rainbow ruby gem
+created_at: 2009-03-24 22:20:50
 tags: console, gem, rainbow, ruby
 
 layout: post

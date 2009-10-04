@@ -1,5 +1,6 @@
 ---
 title: Improved ruby mode for JEdit
+created_at: 2009-04-02 13:03
 tags: jedit, ruby, themes
 
 layout: post
