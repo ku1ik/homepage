@@ -1,0 +1,14 @@
+---
+title: Open File Fast updated for JEdit 4.3pre17
+created_at: 2009-10-11 11:37
+tags: jedit, off
+
+layout: post
+---
+
+This is update for all you JEdit users who updated your beloved JEdit to 4.3pre17, did plugins update and found that OFF is not working anymore.
+
+Newest JEdit offers update of ProjectViewer plugin to version 2.9.1 which is quite not compatible with 2.7.x line. There were some changes in the PV API which broke OFF. I've updated OFF to work with new ProjectViewer and now you can use it again. This is only compatibility relase, no new features.
+
+JEdit jar file: "off-jedit-0.9.4.1.jar":http://counter.sickill.net?f=http://sickill.net/assets/off-jedit-0.9.4.1.jar (requires JEdit 4.3pre17 and ProjectViewer >= 2.9.1)
+
