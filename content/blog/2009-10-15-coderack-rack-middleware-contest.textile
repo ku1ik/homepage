@@ -1,0 +1,19 @@
+---
+title: Coderack, a Rack middleware contest launched
+created_at: 2009-10-15 14:51
+tags: ruby, rack, middleware, contest
+
+layout: post
+---
+
+You've probably heard about "Rack":http://rack.rubyforge.org/, right? Few months ago during the conversation with my teammate about potential and possibilities of Rack, and Rack middleware we've came up with idea of creating some coding contest. We wanted to encourage Ruby developers to explore the power of Rack because we believe it's the best thing since sliced bread. And what better way than to hold a contest? And now we can proudly say that it happened! We've just launched it and got really positive feedback about it so far.
+
+But what is this "CodeRack":http://coderack.org thingie all about? Like I've mentioned first goal is to show Rack's power and encourage its use in Ruby web apps. The secondary goal of the contest is to generate a set of open source solutions that will solve real problems and inspire others. Every entry will be released under the MIT open source license.
+
+Programmers are encouraged to submit contest entries that will be judged based on the cleverness of the application and the elegance of the code. Entries can be submitted at "coderack.org":http://coderack.org until midnight CEST November 15th. Finalists are scheduled to be announced on the 1st of December and public voting will run for one month. The final winners will be announced on the 5th of January.
+
+The first round of the contest will be judged by an elite panel of judges including Ben Bangert (Pylons framework), Chris Wanstrath and PJ Hyett of GitHub, Joshua Peek of 37Signals, Yehuda Katz of Engine Yard (also Rails core team member), Ryan Tomayko of Heroku, Core Rails team member Matt Aimonetti, and the Rails Envy team of Gregg Pollack and Jason Seifer. Once the finalists have been selected by the panel, the public will vote for the top prize winners. 
+
+Prizes have been donated by Bytemark Hosting, GitHub, Jetbrains, Mindmeister, Freelance Total, Heroku, Rackspace Hosting, Peepcode, BDDCasts, and Zenbe Shareflow. The top prize includes a dedicated quad core server package and is valued at over $3000. Every entrant will receive a credit from bddcasts.com and $30 credit from Heroku! All finalists will receive a package including Zenbe Shareflow subscriptions, a RubyMine license from JetBrains, and five credits from bddcasts.com. Details of all of the prize packages will soon be available on the contest website.
+
+So, want to become a Rackstar? It's easy, create some interesting code and submit it to the contest. We've already collected over 45 entries in just few days. Oh, and I've almost forgot, CodeRack site itself is using middlewares, one of them being Ryan Tomayko's awesome Rack::Cache.
