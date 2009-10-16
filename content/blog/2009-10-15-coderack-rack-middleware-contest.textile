@@ -6,7 +6,7 @@ tags: ruby, rack, middleware, contest
 layout: post
 ---
 
-You've probably heard about "Rack":http://rack.rubyforge.org/, right? Few months ago during the conversation with my teammate about potential and possibilities of Rack, and Rack middleware we've came up with idea of creating some coding contest. We wanted to encourage Ruby developers to explore the power of Rack because we believe it's the best thing since sliced bread. And what better way than to hold a contest? And now we can proudly say that it happened! We've just launched it and got really positive feedback about it so far.
+You've probably heard about "Rack":http://rack.rubyforge.org/, right? Few months ago during the conversation with my teammate about potential and possibilities of Rack, and Rack middleware we've came up with an idea of creating some coding contest. We wanted to encourage Ruby developers to explore the power of Rack because we believe it's the best thing since sliced bread. And what better way than to hold a contest? And now we can proudly say that it happened! We've just launched it and got really positive feedback about it so far.
 
 But what is this "CodeRack":http://coderack.org thingie all about? Like I've mentioned first goal is to show Rack's power and encourage its use in Ruby web apps. The secondary goal of the contest is to generate a set of open source solutions that will solve real problems and inspire others. Every entry will be released under the MIT open source license.
 
