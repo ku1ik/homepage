@@ -8,8 +8,9 @@ h2. <%= @item[:title] %>
 
 <%= render "_project", :id => "off", :name => "Open File Fast", :desc => "Plugin for Netbeans IDE 6.5+ and JEdit allowing for quick finding and opening files in your project." %>
 
-<%# partial :project, :locals => { :id => "rainbow", :name => "Rainbow gem", :desc => "Ruby gem extending String class to support ..." } %>
+<%= render "_project", :github_id => "rainbow", :name => "Rainbow gem", :desc => "Rainbow is extension to ruby's String class adding support for colorizing text on ANSI terminals." %>
 
 <%# partial :project, :locals => { :id => "dece", :name => "DeCe", :desc => "LAN messenger featuring public and private channels, file sending, desktop screenshots sharing and more..." } %>
 
 </div>
+
