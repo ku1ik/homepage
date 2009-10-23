@@ -27,6 +27,8 @@ preprocess do
     content << %{<% articles_for_month(Date.new(#{date.year}, #{date.month})).each do |post| %><%= render_post post, :comments => false %><% end %>}
     items << Nanoc3::Item.new(content, { :title => title }, "/blog/#{date.year}/#{month}/")
   end
+
+  # http://pastie.textmate.org/579382
 end
 
 # COMPILATION
