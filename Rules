@@ -41,7 +41,11 @@ end
 
 compile %r(^/blog/\d{4}-\d{2}-\d{2}-.+/) do
   filter :erb
-  filter :redcloth
+  if item[:markup] == "markdown"
+    filter :rdiscount
+  else
+    filter :redcloth
+  end
   layout 'post'
 end
 
