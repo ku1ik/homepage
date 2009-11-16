@@ -16,7 +16,7 @@ Dot at the start of domain name specifies that the cookie will be set for "mydom
 
 This is because Merb::Test::Cookie#valid? makes some regexp check comparing current request domain with domain from cookie, which fails for cookie domain set to '.foo.com'. I've created a fix and spec for this scenario. Patch can be found in "this commit":http://github.com/sickill/merb/commit/a1f1a511b189cfa1ae908cfe481d0ba7bd00860b.
 
-Until it gets merged and released with new Merb version (I hope in 1.1) the simplest workaround is to monkey patch Merb::Test::Cookie class, ie. in spec_helper.rb like this:
+-Until it gets merged and released with new Merb version (I hope in 1.1)- It was already merged into Merb master branch, but until the 1.1 release the simplest workaround is to monkey patch Merb::Test::Cookie class, ie. in spec_helper.rb like this:
 
 bc. class Merb::Test::Cookie
   def valid?(uri)
