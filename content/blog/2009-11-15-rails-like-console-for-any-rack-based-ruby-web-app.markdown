@@ -37,3 +37,5 @@ Default Rack environment is set to _development_ but it can be changed by settin
     RACK_ENV=production racksh
 
 Now I don't need to create some kind of _console.rb_ for my new Rack app, I just use _racksh_. Enjoy!
+
+_UPDATE: [Read here](/blog/2009/11/19/more-rack-shell-goodies-for-all-rack-worshippers.html) for more info._
