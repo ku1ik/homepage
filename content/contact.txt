@@ -28,3 +28,4 @@ function hivelogic_enkoder(){var kode=
 <br/>jabber: kill@jabster.pl
 irc (freenode.net): sickill
 
+<div class="clearfix"></div>

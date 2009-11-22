@@ -81,7 +81,7 @@ img.photo {
       font-weight: bold;
       font-family: Georgia;
       background-color: black;
-      padding: 10px;
+      padding: 10px 10px 10px 0;
       .rounded_big;
     }
   }
@@ -105,7 +105,7 @@ img.photo {
     margin-bottom: 15px;
   }
   .article {
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
     h2 {
       margin-bottom: 5px;
     }
@@ -114,6 +114,10 @@ img.photo {
       font-style: italic;
       margin-bottom: 15px;
     }
+  }
+  .related {
+    p { font-weight: bold }
+    a { color: #60A679 }
   }
   
   .project {
@@ -131,9 +135,13 @@ img.photo {
   float: left;
   width: 800px;
   margin-right: 30px;
-  background-color: #111;
-  padding: 15px;
-  .rounded_big;
+  
+  .section {
+    .rounded_big;
+    background-color: #111;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
 }
 
 #sidebar {
@@ -192,5 +200,5 @@ pre {
 }
 
 #disqus_thread {
-  margin-top: 70px;
+/*  margin-top: 70px;*/
 }

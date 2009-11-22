@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 require 'time'
+# require 'classifier'
+# require 'crm114'
 
 preprocess do
   
@@ -14,29 +16,26 @@ preprocess do
   # create tag pages
   articles_by_tag.keys.each do |tag|
     title = "Posts tagged with '#{tag}'"
-    content = "<h2>#{title}:</h2>\n\n"
+    content = "<h3>#{title}:</h3>\n\n"
     content << %{<% articles_for_tag('#{tag}').each do |post| %><%= render_post post, :comments => false %><% end %>}
-    items << Nanoc3::Item.new(content, { :title => title }, "/blog/tag/#{tag}/")
+    items << Nanoc3::Item.new(content, { :title => title, :layout => "base" }, "/blog/tag/#{tag}/")
   end
   
   # create archive pages
   articles_by_month.each do |date, _|
     month = format("%02d", date.month)
     title = "Archive for #{date.year}/#{month}"
-    content = "<h2>#{title}:</h2>\n\n"
+    content = "<h3>#{title}:</h3>\n\n"
     content << %{<% articles_for_month(Date.new(#{date.year}, #{date.month})).each do |post| %><%= render_post post, :comments => false %><% end %>}
-    items << Nanoc3::Item.new(content, { :title => title }, "/blog/#{date.year}/#{month}/")
+    items << Nanoc3::Item.new(content, { :title => title, :layout => "base" }, "/blog/#{date.year}/#{month}/")
   end
-
-  # http://pastie.textmate.org/579382
-  # http://pastie.org/647081
 end
 
 # COMPILATION
 
 compile %r(^/blog/\d{4}/\d{2}/$) do
   filter :erb
-  layout 'default'
+  layout item[:layout] || 'default'
 end
 
 compile %r(^/blog/\d{4}-\d{2}-\d{2}-.+/) do
@@ -61,7 +60,7 @@ end
 
 compile '*' do
   filter :erb
-  layout 'default'
+  layout item[:layout] || 'default'
 end
 
 # ROUTING
