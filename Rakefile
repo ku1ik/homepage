@@ -17,16 +17,18 @@ task "Create new post"
 task :post do
   require 'erb'
   require 'ostruct'
-  if ARGV.size < 2
-    puts 'rake post "Some title"'
+  title = ENV['title']
+  markup = ENV['markup'] || 'textile'
+  if title.nil?
+    puts 'rake post title="Some title"'
     exit
   end
-  title = ARGV[1]
   tpl = File.read('templates/post.erb')
   now = Time.now
   slug = title.downcase.gsub(/[\s\.]+/, '-').gsub(/[^a-z0-9\-]/, '').gsub(/\-{2,}/, '-')
-  filename = "content/blog/#{Time.now.strftime('%Y-%m-%d-')}#{slug}.textile"
+  filename = "content/blog/#{Time.now.strftime('%Y-%m-%d-')}#{slug}.#{markup}"
   File.open(filename, "w") { |f| f.write ERB.new(tpl).result(binding) }
+  puts "running: #{ENV['EDITOR']} #{filename}"
   system "$EDITOR #{filename}"
 end
 
