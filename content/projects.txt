@@ -6,7 +6,7 @@ h2. <%= @item[:title] %>
 
 <div class="projects">
 
-<%= render "_project", :id => "off", :name => "Open File Fast", :desc => "Plugin for Netbeans IDE 6.5+ and JEdit allowing for quick finding and opening files in your project." %>
+<%= render "_project", :github_id => "off-plugin", :name => "Open File Fast", :desc => "Plugin for Netbeans IDE 6.5+ and JEdit allowing for quick finding and opening files in your project." %>
 
 <%= render "_project", :github_id => "rainbow", :name => "Rainbow gem", :desc => "Rainbow is extension to ruby's String class adding support for colorizing text on ANSI terminals." %>
 
