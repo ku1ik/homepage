@@ -13,7 +13,7 @@ task :compile_less do
   `lessc assets/css/master.less`
 end
 
-task "Create new post"
+desc "Create new post"
 task :post do
   require 'erb'
   require 'ostruct'
@@ -30,6 +30,12 @@ task :post do
   File.open(filename, "w") { |f| f.write ERB.new(tpl).result(binding) }
   puts "running: #{ENV['EDITOR']} #{filename}"
   system "$EDITOR #{filename}"
+end
+
+desc "Start local adsf server"
+task :server do
+  system "cd output; adsf -p 4000 &"
+  system "sleep 1; firefox http://localhost:4000/"
 end
 
 task :deploy => [:compile_less, :"deploy:rsync"]
