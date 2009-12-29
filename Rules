@@ -1,10 +1,7 @@
 #!/usr/bin/env ruby
 require 'time'
-# require 'classifier'
-# require 'crm114'
 
 preprocess do
-  
   # prepare blog posts
   items.each do |item|
     if item.identifier =~ /^\/blog\//
