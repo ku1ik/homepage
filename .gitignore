@@ -2,3 +2,5 @@ output
 tmp
 *.swp
 master.css
+.secret
+
