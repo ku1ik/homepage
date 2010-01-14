@@ -2,26 +2,26 @@ require 'nanoc3/tasks'
 
 desc "Compile site"
 task :compile do
-  system "nanoc3 co"
+  system "bin/nanoc3 compile"
 end
 
 desc "Compile .less"
 task :compile_less do
   puts "Compiling .less"
-  `lessc assets/css/master.less`
+  `bin/lessc assets/css/master.less`
 end
 
-desc "Link static assets to output dir"
+desc "Link static assets to public dir"
 task :link_assets do
   %w(css javascripts images favicon.ico robots.txt).each do |file|
     src = "../assets/#{file}"
-    dst = "output/#{file}"
+    dst = "public/#{file}"
     `ln -s #{src} #{dst}` unless File.exist?(dst)
   end
 end
 
 task :rmrf do
-  system "rm -rf output"
+  system "rm -rf public"
 end
 
 desc "Create new post"
@@ -45,11 +45,10 @@ end
 
 desc "Start local adsf server"
 task :server do
-  system "cd output; adsf -p 4000 &"
+  system "cd public; adsf -p 4000 &"
   system "sleep 1; firefox http://localhost:4000/"
 end
 
 task :full_compile => [:compile, :compile_less, :link_assets]
 task :deploy => [:full_compile, :"deploy:rsync"]
-task :recompile => [:rmrf, :full_compile]
-
+task :build => [:rmrf, :full_compile]

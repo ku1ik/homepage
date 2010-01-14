@@ -3,4 +3,6 @@ tmp
 *.swp
 master.css
 .secret
+bin
+vendor/gems
 
