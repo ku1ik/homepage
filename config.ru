@@ -6,7 +6,7 @@ require 'sinatra'
 
 post "/deploy/:secret" do
   if params["secret"] == SECRET
-    `cd #{DIR}; bin/rake build; mkdir tmp; touch tmp/restart.txt`
+    `cd #{DIR}; git pull; bin/rake build; mkdir tmp; touch tmp/restart.txt`
     "Thanks, deploying..."
   else
     pass
