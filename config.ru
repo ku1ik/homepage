@@ -4,10 +4,10 @@ SECRET = ::File.read(DIR + "/.secret").strip rescue ""
 
 require 'sinatra'
 
-get "/deploy/:secret" do
+post "/deploy/:secret" do
   if params["secret"] == SECRET
     `cd #{DIR}; bin/rake build; mkdir tmp; touch tmp/restart.txt`
-    "OK"
+    "Thanks, deploying..."
   else
     pass
   end
