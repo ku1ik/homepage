@@ -1,6 +1,6 @@
 DIR = ::File.expand_path(::File.dirname(__FILE__))
 require DIR + "/vendor/gems/environment"
-SECRET = ::File.read(DIR + "/../.secret").strip rescue ""
+SECRET = ::File.read(DIR + "/.secret").strip rescue ""
 
 get "/deploy/:secret" do
   if params["secret"] == SECRET
