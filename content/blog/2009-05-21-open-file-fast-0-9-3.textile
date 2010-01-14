@@ -20,4 +20,4 @@ What's new?
 
 I've tested this version under Netbeans 6.5 and 6.7beta and I didn't notice any problem, however if you encounter some issue let me know.
 
-NBM package: "off-netbeans-0.9.3.nbm":http://counter.sickill.net?f=http://sickill.net/assets/off-netbeans-0.9.3.nbm
+NBM package: "off-netbeans-0.9.3.nbm":http://counter.sickill.net?f=http://drop.sickill.net/blog/off-netbeans-0.9.3.nbm

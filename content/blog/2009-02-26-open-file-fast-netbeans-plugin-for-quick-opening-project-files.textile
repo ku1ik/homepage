@@ -52,7 +52,7 @@ Open File Fast can be set up to your own preferences and to match your own workf
 <p class="images"><%= image("http://farm4.static.flickr.com/3567/3311489750_d487b3da51_m.jpg", "http://farm4.static.flickr.com/3567/3311489750_306e760e2e_o.png") %></p>
 
 Grab it here:
-"off-netbeans-0.9.3.nbm":http://counter.sickill.net/?f=http://sickill.net/assets/off-netbeans-0.9.3.nbm. If you want to help or just look into sources they're on "github":http://github.com/sickill/off-plugin/tree/master .
+"off-netbeans-0.9.3.nbm":http://counter.sickill.net/?f=http://drop.sickill.net/blog/off-netbeans-0.9.3.nbm. If you want to help or just look into sources they're on "github":http://github.com/sickill/off-plugin/tree/master .
 This is the first public version of this plugin so it could have some bugs, however we've been using it for a while now with my workmates and nothing exploded yet :)
 
 *Update:* for most recent version of plugin go to "OFF project page":/projects/off .

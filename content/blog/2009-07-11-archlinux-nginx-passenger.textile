@@ -18,7 +18,7 @@ If someone needs to setup "Nginx":http://wiki.nginx.org web server with "Passeng
 
 <pre><code>cd `passenger-config --root`; sudo rake nginx</code></pre>
 
-3. Download this "PKGBUILD":http://counter.sickill.net?f=http://sickill.net/assets/archlinux-nginx-passenger.tgz (modified PKGBUILD of nginx-0.7.61-1 from community repository with passenger module added)
+3. Download this "PKGBUILD":http://counter.sickill.net?f=http://drop.sickill.net/blog/archlinux-nginx-passenger.tgz (modified PKGBUILD of nginx-0.7.61-1 from community repository with passenger module added)
 
 4. Unpack and build package (if running as non-root be sure you have fakeroot package installed):
 

@@ -16,5 +16,5 @@ Besides all of above here are the changes for this release:
 * masks in options panel (hide files / move files to bottom of the results) have been changed from regular expression format to wildcard format - just use '*' as replacement for string of any length
 * added indexing status indicator to search dialog.
 
-Netbeans NBM package: "off-netbeans-0.9.4.nbm":http://counter.sickill.net?f=http://sickill.net/assets/off-netbeans-0.9.4.nbm
-JEdit jar file: "off-jedit-0.9.4.jar":http://counter.sickill.net?f=http://sickill.net/assets/off-jedit-0.9.4.jar (requires JEdit 4.3pre16 and ProjectViewer 2.1.3.7)
+Netbeans NBM package: "off-netbeans-0.9.4.nbm":http://counter.sickill.net?f=http://drop.sickill.net/blog/off-netbeans-0.9.4.nbm
+JEdit jar file: "off-jedit-0.9.4.jar":http://counter.sickill.net?f=http://drop.sickill.net/blog/off-jedit-0.9.4.jar (requires JEdit 4.3pre16 and ProjectViewer 2.1.3.7)
