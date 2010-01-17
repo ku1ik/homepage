@@ -45,8 +45,7 @@ end
 
 desc "Start local adsf server"
 task :server do
-  system "cd public; adsf -p 4000 &"
-  system "sleep 1; firefox http://localhost:4000/"
+  system "bin/adsf -H thin -p 4000 -r public"
 end
 
 task :full_compile => [:compile, :compile_less, :link_assets]
