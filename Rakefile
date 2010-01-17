@@ -49,5 +49,4 @@ task :server do
 end
 
 task :full_compile => [:compile, :compile_less, :link_assets]
-task :deploy => [:full_compile, :"deploy:rsync"]
 task :build => [:rmrf, :full_compile]
