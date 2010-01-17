@@ -10,5 +10,4 @@ This is update for all you JEdit users who updated your beloved JEdit to 4.3pre1
 
 Newest JEdit offers update of ProjectViewer plugin to version 2.9.1 which is quite not compatible with 2.7.x line. There were some changes in the PV API which broke OFF. I've updated OFF to work with new ProjectViewer and now you can use it again. This is only compatibility relase, no new features.
 
-JEdit jar file: "off-jedit-0.9.4.1.jar":http://counter.sickill.net?f=http://drop.sickill.net/blog/off-jedit-0.9.4.1.jar (requires JEdit 4.3pre17 and ProjectViewer >= 2.9.1)
-
+JEdit jar file: <%= download_link "off-jedit-0.9.4.1.jar" %> (requires JEdit 4.3pre17 and ProjectViewer >= 2.9.1)

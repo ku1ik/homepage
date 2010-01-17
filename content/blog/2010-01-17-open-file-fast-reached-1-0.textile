@@ -17,5 +17,5 @@ Notice that entered characters are now displayed in bold indicating where they w
 
 Netbeans version of plugin was updated to work in Netbeans 6.8, JEdit's one works now in final JEdit 4.3 version (with ProjecViewer 2.9.1+).
 
-Netbeans NBM package: "off-netbeans-1.0.nbm":http://counter.sickill.net?f=http://drop.sickill.net/blog/off-netbeans-1.0.nbm
-JEdit jar file: "off-jedit-1.0.jar":http://counter.sickill.net?f=http://drop.sickill.net/blog/off-jedit-1.0.jar
+Netbeans NBM package: <%= download_link "off-netbeans-1.0.nbm" %>
+JEdit jar file: <%= download_link "off-jedit-1.0.jar" %>
