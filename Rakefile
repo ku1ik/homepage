@@ -36,9 +36,13 @@ task :post do
   now = Time.now
   slug = title.downcase.gsub(/[\s\.]+/, '-').gsub(/[^a-z0-9\-]/, '').gsub(/\-{2,}/, '-')
   filename = "content/blog/#{Time.now.strftime('%Y-%m-%d-')}#{slug}.#{markup}"
-  File.open(filename, "w") { |f| f.write ERB.new(tpl).result(binding) }
-  puts "running: #{ENV['EDITOR']} #{filename}"
-  system "$EDITOR #{filename}"
+  if File.exist?(filename)
+    raise RuntimeError.new("File #{filename} already exists!")
+  else
+    File.open(filename, "w") { |f| f.write ERB.new(tpl).result(binding) }
+    puts "running: #{ENV['EDITOR']} #{filename}"
+    system "$EDITOR #{filename}"
+  end
 end
 
 desc "Start local adsf server"
