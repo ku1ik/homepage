@@ -17,7 +17,7 @@ def render_post(post, opts={}, &blk)
   html << %(  <br class="clear" />)
   # content
   html << %(<div class="article-content">)
-  html << (block_given? ? capture(&blk) : post.content)
+  html << (block_given? ? capture(&blk) : post.compiled_content)
   html << %(</div>) # close article-content
   html << %(</div>) # close article
   if !opts[:comments]
@@ -68,7 +68,7 @@ end
 
 def articles_by_tag
   sorted_articles.inject(Hash.new { |h,k| h[k] = [] }) do |acc, a|
-    a.tags.each do |t| 
+    a.tags.each do |t|
       acc[t] << a
     end
     acc
@@ -86,11 +86,8 @@ def related_articles(item, number=3)
       common_tags = item.tags & a.tags
       if common_tags.size >= 2
         matches << [common_tags, a]
-        # p common_tags
       end
     end
   end
   best_matching = matches.sort_by { |m| -m.first.size }[0..2].map { |m| m[1] }
-  # p best_matching.map { |bm| bm[:title] }
-  # best_matching
 end

@@ -1,21 +1,6 @@
 desc "Compile site"
 task :compile do
-  system "bin/nanoc3 compile"
-end
-
-desc "Compile .less"
-task :compile_less do
-  puts "Compiling .less"
-  `bin/lessc assets/css/master.less`
-end
-
-desc "Link static assets to public dir"
-task :link_assets do
-  %w(css javascripts images favicon.ico robots.txt).each do |file|
-    src = "../assets/#{file}"
-    dst = "public/#{file}"
-    `ln -s #{src} #{dst}` unless File.exist?(dst)
-  end
+  system "bundle exec nanoc compile"
 end
 
 task :rmrf do
@@ -47,8 +32,7 @@ end
 
 desc "Start local adsf server"
 task :server do
-  system "bin/adsf -H thin -p 4000 -r public"
+  system "bundle exec adsf -H thin -p 4000 -r public"
 end
 
-task :full_compile => [:compile, :compile_less, :link_assets]
-task :build => [:rmrf, :full_compile]
+task :build => [:rmrf, :compile]

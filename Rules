@@ -5,11 +5,11 @@ preprocess do
   # prepare blog posts
   items.each do |item|
     if item.identifier =~ /^\/blog\//
-      item[:kind] = 'article' 
-      item[:created_at] = "---" if item[:created_at].nil? #item.identifier[/\d{4}-\d{2}-\d{2}/] if item[:created_at].nil?
+      item[:kind] = 'article'
+      item[:created_at] = "---" if item[:created_at].nil?
     end
   end
-  
+
   # create tag pages
   articles_by_tag.keys.each do |tag|
     title = "Posts tagged with '#{tag}'"
@@ -17,7 +17,7 @@ preprocess do
     content << %{<% articles_for_tag('#{tag}').each do |post| %><%= render_post post, :comments => false %><% end %>}
     items << Nanoc3::Item.new(content, { :title => title, :layout => "base" }, "/blog/tag/#{tag}/")
   end
-  
+
   # create archive pages
   articles_by_month.each do |date, _|
     month = format("%02d", date.month)
@@ -30,16 +30,11 @@ end
 
 # COMPILATION
 
-compile %r(^/blog/\d{4}/\d{2}/$) do
-  filter :erb
-  layout item[:layout] || 'default'
-end
-
 compile %r(^/blog/\d{4}-\d{2}-\d{2}-.+/) do
   filter :erb
-  if item[:markup] == "markdown"
+  if item[:extension] == "markdown" || item[:extension] == "md"
     filter :rdiscount
-  else
+  elsif item[:extension] == "txt" || item[:extension] == "textile"
     filter :redcloth
   end
   layout 'post'
@@ -49,6 +44,13 @@ compile %r(^/(about-me|contact|projects)) do
   filter :erb
   filter :redcloth
   layout 'default'
+end
+
+compile '/css/master/' do
+  filter :less
+end
+
+compile %r{^/(css|images|javascripts|robots|favicon)/} do
 end
 
 compile '/atom/' do
@@ -66,8 +68,16 @@ route %r(^/blog/\d{4}-\d{2}-\d{2}-.+/) do
   item.identifier[0..-2].gsub(/(\d{4})-(\d{2})-(\d{2})-(.+)/, '\1/\2/\3/\4') + '.html'
 end
 
+route %r{^/(css|images|javascripts)/} do
+  item.identifier[0..-2] + '.' + item[:extension].gsub('less', 'css')
+end
+
 route '/atom/' do
   '/atom.xml'
+end
+
+route '/robots/' do
+  '/robots.txt'
 end
 
 route '*' do

@@ -2,8 +2,6 @@
 title: Improved ruby mode for JEdit
 created_at: 2009-04-02 13:03
 tags: jedit, ruby, themes
-
-layout: post
 ---
 
 My post about Textmate to JEdit theme converter (<%= link_to "tm2jed", "/blog/tag/tm2jed" %>) included example screenshots of JEdit running with some converted themes. However I'm using a little tweaked ruby highlighting mode which recognizes method, class and module names. It shows those names using styling defined for __FUNCTION__ type entities (not all JEdit themes include styling for it but themes converted with tm2jed use it).

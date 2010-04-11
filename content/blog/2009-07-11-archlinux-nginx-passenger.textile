@@ -2,8 +2,6 @@
 title: Archlinux + Nginx + Passenger
 created_at: 2009-07-10 11:48
 tags: archlinux, deployment, nginx, passenger, ruby
-
-layout: post
 ---
 
 *UPDATE*: _I've added this package to "AUR":http://aur.archlinux.org. You can grab it "here":http://aur.archlinux.org/packages.php?ID=28185 if you prefer to build it from AUR. Note: it automatically builds passenger's nginx module so step 2. is not needed for it, you only need to have passenger gem installed._

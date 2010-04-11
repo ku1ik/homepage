@@ -2,9 +2,6 @@
 title: Quick and dirty hack for RSpec's before(:all)
 created_at: 2009-11-23 19:41
 tags: ruby, rspec, testing
-markup: markdown
-
-layout: post
 ---
 
 RSpec is generally nice testing framework. It supports _before_ and _after_ hooks which can be invoked before/after _each_ test case or _all_ test cases.
