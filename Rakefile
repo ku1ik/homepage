@@ -1,3 +1,5 @@
+require 'nanoc3/tasks'
+
 desc "Compile site"
 task :compile do
   system "bundle exec nanoc compile"
