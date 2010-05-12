@@ -15,4 +15,8 @@ If you want to have highlighting for method names in your ruby code put followin
 <MARK_FOLLOWING TYPE="FUNCTION" MATCH_TYPE="KEYWORD1">module </MARK_FOLLOWING>
 </pre>
 
-Or just get <%= download_link "mine", "ruby.xml" %> ruby.xml file and put it into your __.jedit/modes__ directory.
+Or just get <%= download_link "mine", "ruby.xml" %> ruby.xml file, put it into your __.jedit/modes__ directory and add this to __.jedit/modes/catalog__ file:
+
+<pre>
+<MODE NAME="ruby" FILE="ruby.xml" FILE_NAME_GLOB="*.rb" />
+</pre>

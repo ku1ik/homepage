@@ -37,4 +37,8 @@ task :server do
   system "bundle exec adsf -H thin -p 4000 -r public"
 end
 
+desc "Build site from scratch"
 task :build => [:rmrf, :compile]
+
+desc "Deploy"
+task :deploy => ["deploy:rsync"]
