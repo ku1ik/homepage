@@ -1,0 +1,169 @@
+/*--------------------------------------------------------------
+ Local.css
+ Add any personal changes that you'd like to make to the theme
+ in this template.
+ --------------------------------------------------------------*/
+
+body {
+  background: #52060a url(http://farm1.static.flickr.com/148/394278548_b14f737acf_b.jpg);
+  color: #ffffff;
+}
+
+#content .hentry {
+  padding:15px;
+  margin: 0px;
+}
+
+#content .even {
+  background: black;
+  color: white;
+}
+
+#content .odd {
+  background: white;
+  color: black;
+}
+
+#content {
+  padding: 0px;
+}
+
+#header {
+  background: none;
+}
+
+#header a:link, #header a:visited {
+  color:#DD0000;
+  font-family: 'Trebuchet MS',georgia,times,serif;
+  font-size:40px;
+  text-decoration:none;
+  background-color:black;
+  padding: 10px;
+}
+
+#content .hentry .entry-title a:link, #content .hentry .entry-title a:visited {
+  text-decoration:none;
+  font-family: 'Trebuchet MS';
+  color:#DD0000;
+  font-size: 24px;
+}
+
+#content .hentry .vcard, #content .hentry .published {
+  font-family: "lucida grande",verdana,sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+#content .even .vcard, #content .even .published {
+    color: white;
+}
+
+#content .odd .vcard, #content .odd .published {
+    color: black;
+}
+
+#content .hentry .entry-title {
+  margin-bottom: 5px;
+}
+
+#comments li.comment {
+  border: 0px;
+  margin: 0px;
+}
+
+#comments .odd {
+  background: black;
+  color: white;
+}
+
+#comments .even {
+  background: white;
+  color: black;
+}
+
+#comments span.author {
+  color: #DD0000;
+}
+
+#content h5 {
+  background: none;
+}
+
+#content .hentry .entry-content {
+  margin-top:15px;
+}
+
+#content li.comment .author abbr, #content li.trackback .author abbr {
+    font-family:"lucida grande",verdana,sans-serif;
+    font-size:12px;
+    font-style:italic;
+    font-weight: normal;
+}
+
+#comments .even .date, #comments .even .date {
+    color: black;
+}
+
+#comments .odd .date, #comments .odd .date {
+    color: white;
+}
+
+#content .hentry ul.meta {
+  background: none;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+a:link, a:visited { color: #DD0000; text-decoration: underline }
+a:hover, a:active { color: #DD0000; text-decoration: none }
+
+/*#content .hentry .meta a:link,
+#content .hentry .meta a:visited {
+  color: #555;
+  text-decoration: none;
+  border-bottom: 1px dotted #aaa;
+}
+*/
+#content .odd .meta a:hover,
+#content .odd .meta a:active {
+  color: black;
+  background: none;
+}
+
+#content .even .meta a:hover,
+#content .even .meta a:active {
+  color: white;
+  background: none;
+}
+
+#content #comment-form {
+    background: #425951;
+}
+
+#sidebar {
+    background-color: black;
+    padding: 15px;
+    border: 0;
+}
+
+#content .odd pre {
+  background: #000;
+}
+
+#content .odd pre code {
+  color: #CCC;
+}
+
+#content .even pre {
+  background: #fff;
+}
+
+#content .even pre code {
+  color: #333;
+}
+
+#content h5 {
+  border: 0;
+}

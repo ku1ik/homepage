@@ -1,0 +1,10 @@
+--- 
+name: feather-twitter
+author: 
+  name: El Draper
+  homepage: http://crazycool.co.uk
+  email: el@eldiablo.co.uk
+package: feather-twitter-1.0.tgz
+about: This plugin provides Twitter integration for your blog
+version: 1.0
+homepage: http://featherblog.org

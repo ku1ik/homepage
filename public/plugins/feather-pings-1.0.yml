@@ -1,0 +1,10 @@
+--- 
+name: feather-pings
+author: 
+  name: El Draper
+  homepage: http://crazycool.co.uk
+  email: el@eldiablo.co.uk
+package: feather-pings-1.0.tgz
+about: This plugin adds the ability for ping services to be contacted whenever a new post is published.
+version: 1.0
+homepage: http://featherblog.org

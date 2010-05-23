@@ -1,0 +1,10 @@
+--- 
+name: feather-snippets
+author: 
+  name: El Draper
+  homepage: http://crazycool.co.uk
+  email: el@eldiablo.co.uk
+package: feather-snippets-1.0.tgz
+about: This plugin adds the ability for the user to create and manage dynamic snippets
+version: 1.0
+homepage: http://featherblog.org

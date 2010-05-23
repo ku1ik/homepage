@@ -1,0 +1,10 @@
+--- 
+name: feather-tagging
+author: 
+  name: Michael Leung and El Draper
+  homepage: http://bloggingmyassoff.com and http://crazycool.co.uk
+  email: blamemike@gmail.com and el@eldiablo.co.uk
+package: feather-tagging-1.0.tgz
+about: This plugin provides tag support to articles.
+version: 1.0
+homepage: http://featherblog.org

@@ -1,0 +1,10 @@
+--- 
+name: feather-recaptcha
+author: 
+  name: Jake Good
+  homepage: http://www.thoughtstoblog.com
+  email: jake@whoisjake.com
+package: feather-recaptcha-1.0.tgz
+about: This plugin provides basic recaptcha comment validation.
+version: 1.0
+homepage: http://featherblog.org

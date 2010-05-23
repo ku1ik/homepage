@@ -1,0 +1,10 @@
+--- 
+name: feather-pages
+author: 
+  name: Peter Dirickson
+  homepage: http://www.merbing.com
+  email: peterwd@gmail.com
+package: feather-pages-1.0.tgz
+about: This plugin provides a base content page system (CMS) for feather.
+version: 1.0
+homepage: http://featherblog.org

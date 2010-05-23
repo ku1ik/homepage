@@ -1,0 +1,10 @@
+--- 
+name: feather-formatters
+author: 
+  name: El Draper & Michael Murray
+  homepage: http://crazycool.co.uk and http://sudothinker.com
+  email: el@eldiablo.co.uk and sudothinker@gmail.com
+package: feather-formatters-1.0.tgz
+about: This plugin provides different formatters to be used with Feather. Also includes support for code syntax highlighting via <code:language> tags
+version: 1.0
+homepage: http://featherblog.org

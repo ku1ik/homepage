@@ -1,0 +1,10 @@
+--- 
+name: feather-import
+author: 
+  name: El Draper
+  homepage: http://crazycool.co.uk
+  email: el@eldiablo.co.uk
+package: feather-import-1.0.tgz
+about: This plugin provides a way for users to import existing content (posts and comments) from other sources using RSS
+version: 1.0
+homepage: http://featherblog.org

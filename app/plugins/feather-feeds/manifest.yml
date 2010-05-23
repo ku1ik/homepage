@@ -1,0 +1,8 @@
+name: feather-feeds
+version: 1.0
+homepage: http://featherblog.org
+author:
+    name: El Draper
+    email: el@eldiablo.co.uk
+    homepage: http://crazycool.co.uk
+about: This plugin provides RSS/Atom feeds for a Feather blog.

@@ -1,0 +1,10 @@
+--- 
+name: feather-mollom
+author: 
+  name: Rob Kaufman
+  homepage: http://www.notch8.com
+  email: unknown
+package: feather-mollom-1.0.tgz
+about: This plugin provides basic Mollom comment validation.
+version: 1.0
+homepage: http://featherblog.org

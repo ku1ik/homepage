@@ -1,0 +1,14 @@
+<% throw_content :right do %>
+  <h4>View Theme</h4>
+  <p>
+	  Here you can view the details of a theme.
+  </p>
+<% end %>
+
+<h1>View Theme</h1>
+
+<p>
+	Name: <%= @theme %>
+</p>
+
+<%= link_to "Back to themes", url(:admin_themes) %>

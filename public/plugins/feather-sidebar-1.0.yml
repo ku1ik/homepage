@@ -1,0 +1,10 @@
+--- 
+name: feather-sidebar
+author: 
+  name: Michael Leung
+  homepage: http://bloggingmyassoff.com
+  email: blamemike@gmail.com
+package: feather-sidebar-1.0.tgz
+about: This plugin provides the ability to create arbitrary sidebar links.
+version: 1.0
+homepage: http://featherblog.org
