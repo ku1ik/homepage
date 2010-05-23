@@ -1,5 +1,2 @@
-public
-tmp
-*.swp
-.secret
-.bundle
+nbproject
+output

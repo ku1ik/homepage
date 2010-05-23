@@ -1,0 +1,272 @@
+body {
+  background: black url(/images/sk-bg-v1.png) repeat-x;
+  color: black;
+}
+
+html, body, div, td {
+  font-family: Verdana,"Bitstream Vera Sans",sans-serif;
+  font-size: 12px;
+}
+
+em {
+  font-style: italic;
+}
+
+p.section  {
+font-family:'Trebuchet MS',Calibri,Arial,Helvetica;
+font-size:24px;
+padding-bottom:15px;
+padding-left:15px;
+padding-right:15px;
+padding-top:15px;
+color: #777;
+/*text-align: center;*/
+font-style: italic;
+}
+#header h2 {
+  font: normal 12px verdana, arial, sans-serif;
+  margin: 2.35em 0.2em 0 0;
+  float: right;
+}
+
+#header .logo {
+  background-color: white;
+  padding: 20px;
+  font-size: 14px;
+}
+
+#content h2 {
+  font-size: 24px;
+  margin: 0 0 0.3em;
+  font-family: 'Trebuchet MS', Calibri, Arial, Helvetica;
+}
+#content .article {
+  margin: 0px;
+
+}
+
+#content h2.previously {
+  border-top:1px solid #CCCCCC;
+  margin: 20px 0 20px 0;
+  padding-top:40px;
+}
+
+#content p {
+  margin-bottom: 15px;
+  line-height:normal;
+}
+
+#content {
+  padding: 0px;
+  background: white; 
+  color: black;
+  padding:15px 15px 50px;
+}
+
+#header {
+  background: none;
+  
+}
+
+#header a:link, #header a:visited {
+  color:#DD0000;
+  font-family: 'Trebuchet MS',georgia,times,serif;
+  font-size:40px;
+  text-decoration:none;
+}
+
+#content .article-title a:link, #content .article-title a:visited {
+  text-decoration:none;
+  font-size: 24px;
+}
+
+#content .article-preview .article-title a:link, #content .article-preview .article-title a:visited {
+  font-size: 18px;
+}
+
+#content .article-preview {
+  margin-bottom: 15px;
+}
+
+#content .article .vcard, #content .article .published {
+  font-family: "lucida grande",verdana,sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+#content .even .vcard, #content .even .published {
+    color: white;
+}
+
+#content .odd .vcard, #content .odd .published {
+    color: black;
+}
+
+#content .article-title {
+  margin-bottom: 5px;
+  letter-spacing:-1.5px;
+  line-height:99%;
+}
+
+#content .article-info {
+  font-style: italic;
+  letter-spacing:-1px;
+  font-size: 11px;
+}
+
+#content strong {
+  font-weight: 800;
+}
+
+/*
+#comments li.comment {
+  border: 0px;
+  margin: 0px;
+}
+
+#comments .odd {
+  background: black;
+  color: white;
+}
+
+#comments .even {
+  background: white;
+  color: black;
+}
+
+#comments span.author {
+  color: #DD0000;
+}
+*/
+#content h5 {
+  background: none;
+}
+
+#content .article .article-content {
+  margin-top:15px;
+}
+
+#content li.comment .author abbr, #content li.trackback .author abbr {
+    font-family:"lucida grande",verdana,sans-serif;
+    font-size:12px;
+    font-style:italic;
+    font-weight: normal;
+}
+/*
+#comments .even .date, #comments .even .date {
+    color: black;
+}
+
+#comments .odd .date, #comments .odd .date {
+    color: white;
+}
+*/
+#content .article ul.meta {
+  background: none;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+a:link, a:visited { color: #ea7a22; text-decoration: underline }
+a:hover, a:active { color: #ea7a22; text-decoration: none }
+
+#content .odd .meta a:hover,
+#content .odd .meta a:active {
+  color: black;
+  background: none;
+}
+
+#content .even .meta a:hover,
+#content .even .meta a:active {
+  color: white;
+  background: none;
+}
+
+#content #comment-form {
+    background: #425951;
+}
+
+#sidebar {
+/*    background-color: #002548;*/
+    border: 0;
+    font-size:11px;
+    margin-left: 15px;
+}
+
+#sidebar .content_box {
+    background-color: white;
+    margin-bottom: 30px;
+    float: left;
+    padding: 15px;
+}
+
+pre {
+  font-family: Monospace;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+#content h5 {
+  border: 0;
+}
+
+#footer span.powered {
+  background-color: white;
+  padding: 10px;
+  font-size: 10px;
+}
+#sidebar img.avatar {
+  float: right;
+}
+
+.article-content p {
+  line-height: normal;
+  margin-bottom: 15px;
+}
+
+#sidebar .menu p {
+  margin: 5px 0 5px 0;
+}
+
+img.photo {
+  float: left;
+  margin-right: 15px;
+}
+
+div.left-aligned img {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+div.centered {
+  text-align: center;
+}
+
+div.centered img {
+  margin: 0 10px 20px 10px;
+}
+
+div.clear {
+  clear: both;
+}
+
+#disqus_thread {
+  margin-top: 50px;
+}
+
+code {
+}
+
+pre code {
+  display: block;
+  padding: 10px;
+  background-color: #555;
+  color: white;
+}
+
+.images img {
+  border: 1px solid #CCCCCC;
+  padding: 5px;
+}

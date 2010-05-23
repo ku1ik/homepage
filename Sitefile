@@ -1,0 +1,11 @@
+SITE.user = "blog"
+SITE.host = "sickill.net"
+SITE.remote_dir = "/home/blog/www"
+
+
+task :default => :build
+
+desc 'deploy the site to the webserver'
+task :deploy => [:build, 'deploy:rsync']
+
+# EOF

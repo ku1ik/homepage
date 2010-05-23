@@ -1,0 +1,28 @@
+---
+title:       Welcome
+created_at:  2008-08-02 14:06:40.000000 -06:00
+dirty:       true
+filter:
+  - erb
+---
+
+<%
+  articles = @pages.find(:all,
+                         :in_directory => "blog",
+                         :blog_post => true,
+                         :recursive => true,
+                         :sort_by => "created_at", 
+                         :reverse => true)
+  first = articles.shift
+%>
+
+<%= render(:partial => '/post', :locals => { :page => first, :body => render(first), :show_comments => false } ) %>
+
+<h2 class="previously">Previously on sickill.net:</h2>
+
+<% paginate(articles, 10) do |page| %>
+  <%= render(:partial => '/post', :locals => { :page => page, :body => nil} ) %>
+<% end %>
+
+<%= link_to("Prev", @pager.prev) if @pager.prev? %>
+<%= link_to("Next", @pager.next) if @pager.next? %>

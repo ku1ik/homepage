@@ -1,0 +1,18 @@
+---
+filter: erb
+---
+<div class="article<%= '-preview' unless body %>">
+  <h2 class="article-title"><%= link_to page.title, page.url %></h2>
+  <div class="article-info">Posted by <strong>Sickill</strong> on <%= page.created_at.strftime("%b %d, %y") %></div>
+  <% if body %>
+    <br class="clear" />
+    <div class="article-content">
+      <%= body %>
+    </div>
+    <% if show_comments %>
+      <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/sickill/embed.js"></script><noscript><a href="http://sickill.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    <% else %>
+      <%= link_to "View Comments", page.url+"#disqus_thread" %>
+    <% end %>
+  <% end %>
+</div>
