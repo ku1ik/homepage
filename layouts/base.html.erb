@@ -3,8 +3,8 @@
 <head>
   <title><%= @item[:title] + " - " if @item[:title] %>Marcin Kulik's tech stuff</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="description" content="<%= @item[:title] %>" />
-  <meta name="keywords" content="marcin kulik, mkulik, sickill, blog, <%= @item[:tags] %>" />
+  <meta name="description" content="<%= @item[:title] || 'Personal blog of Marcin Kulik, curious software developer and open-source addict' %>" />
+  <meta name="keywords" content="marcin kulik, mkulik, sickill, blog, programming, ruby, <%= @item[:tags] %>" />
   <link rel="alternate" type="application/atom+xml" title="Atom" href="http://feeds2.feedburner.com/SickillNet" />
   <link rel="stylesheet" href="/css/reset.css" type="text/css" />
   <link rel="stylesheet" href="/css/master.css" type="text/css" />
