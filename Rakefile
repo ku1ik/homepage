@@ -14,7 +14,7 @@ task :post do
   require 'erb'
   require 'ostruct'
   title = ENV['title']
-  markup = ENV['markup'] || 'textile'
+  markup = ENV['markup'] || 'markdown'
   if title.nil?
     puts 'rake post title="Some title"'
     exit
@@ -27,8 +27,7 @@ task :post do
     raise RuntimeError.new("File #{filename} already exists!")
   else
     File.open(filename, "w") { |f| f.write ERB.new(tpl).result(binding) }
-    puts "running: #{ENV['EDITOR']} #{filename}"
-    system "$EDITOR #{filename}"
+    puts "created #{filename}"
   end
 end
 
