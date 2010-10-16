@@ -1,8 +1,6 @@
----
 title: Rubytime plasmoid
-created_at: 2009-06-20 13:20
+date: 2009-06-20 13:20
 tags: kde, plasmoid, python, rubytime, widget
----
 
 "Rubytime":http://rubytime.org was first "Lunar Logic Polska":http://lunarlogicpolska.com Ruby on Rails application. When I've started working at LLP Rubytime was at version 2.1. Almost every programmer at LLP commited some changes for it during its lifetime and the code which remembered Rails 1.x needed a serious rewrite. I had the chance to rewrite it from scratch using Merb and DataMapper (this was fun). So now we have Rubytime 3 with good quality code and JSON API (read on).
 

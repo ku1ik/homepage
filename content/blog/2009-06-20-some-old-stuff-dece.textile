@@ -1,7 +1,5 @@
----
 title: Some old stuff - DeCe
 tags: chat, dece, lan
 draft: true
----
 
 screenshot, dl, history, link to project page

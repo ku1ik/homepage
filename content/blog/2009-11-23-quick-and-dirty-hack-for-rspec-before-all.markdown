@@ -1,8 +1,6 @@
----
 title: Quick and dirty hack for RSpec's before(:all)
-created_at: 2009-11-23 19:41
+date: 2009-11-23 19:41
 tags: ruby, rspec, testing
----
 
 RSpec is generally nice testing framework. It supports _before_ and _after_ hooks which can be invoked before/after _each_ test case or _all_ test cases.
 _before(:all)_ is a little confusing though. It runs your "before" block before all "describes" and "contexts", also nested ones. Here's example:

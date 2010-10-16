@@ -1,8 +1,7 @@
----
 title: Thoughts on Ruby gem dependencies
-created_at: 2010-07-03 11:45
+date: 2010-07-03 11:45
 tags: ruby, rubygems, gem
----
+img: http://farm4.static.flickr.com/3004/3301816514\_6317e3d08b.jpg
 
 ### The problem
 

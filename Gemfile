@@ -1,12 +1,10 @@
-source "http://gemcutter.org"
+source :rubygems
 
 gem "bundler"
 gem "sinatra"
-gem "nanoc", ">=3.1.2"
-gem "rake"
+gem "sinatra-tags", :require => "sinatra/tags"
 gem "RedCloth"
 gem "rdiscount"
-gem "less"
 gem "builder"
-gem "adsf"
 gem "thin"
+gem "rubypants"

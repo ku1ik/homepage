@@ -1,21 +1,6 @@
-require "bundler"
-Bundler.setup
+require "bundler/setup"
+Bundler.require
 
-DIR = ::File.expand_path(::File.dirname(__FILE__))
-SECRET = ::File.read(DIR + "/.secret").strip rescue ""
-
-require 'sinatra'
-require 'run_later'
-
-post "/deploy/:secret" do
-  if params["secret"] == SECRET
-    run_later do
-      `cd #{DIR}; git pull; bundle exec rake build`
-    end
-    "Thanks, deploying..."
-  else
-    pass
-  end
-end
+require File.expand_path(File.join(File.dirname(__FILE__), "app"))
 
 run Sinatra::Application

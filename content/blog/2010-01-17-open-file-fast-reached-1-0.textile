@@ -1,8 +1,6 @@
----
 title: Open File Fast reached 1.0
-created_at: 2010-01-17 15:49
+date: 2010-01-17 15:49
 tags: off, jedit, netbeans
----
 
 After almost a year of development and several beta versions Open File Fast finally became stable and mature enough to bump its version to 1.0. There's not much new in this release except several bugfixes and improved look of search results list.
 

@@ -1,8 +1,6 @@
----
 title: Announcing Coloration, editor color scheme converter
-created_at: 2010-07-24 00:14
+date: 2010-07-24 00:14
 tags: textmate,vim,jedit,kwrite,kate,gem,ruby,converter
----
 
 Without further ado I'm introducing Coloration - editor/IDE color scheme converter. It is an evolution of [tm2jed](/blog/tag/tm2jed) tool and
 at the moment it can convert Textmate color themes (in XML plist format) to Vim, JEdit and Kate/KWrite/KDevelop color schemes. So if you are Textmate->Vim convert

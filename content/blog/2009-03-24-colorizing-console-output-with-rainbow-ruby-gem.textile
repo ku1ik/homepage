@@ -1,14 +1,12 @@
----
 title: Colorizing console output with Rainbow ruby gem
-created_at: 2009-03-24 22:20:50
+date: 2009-03-24 22:20:50
 tags: console, gem, rainbow, ruby
----
 
 If you're working on some cool ruby console-based application or just want to add a little style to your script here is a nice gem for you. It's called *Rainbow* and it extends ruby String class adding methods to wrap the string with "ANSI escape codes":http://en.wikipedia.org/wiki/ANSI_escape_code. 
 
 Look at example irb session and see example usage:
 
-<p class="images"><%= image("http://farm4.static.flickr.com/3450/3382620367_dea29e3b05.jpg", "http://farm4.static.flickr.com/3450/3382620367_07e20a2678_o.png") %></p>
+<%= image("http://farm4.static.flickr.com/3450/3382620367_dea29e3b05.jpg", "http://farm4.static.flickr.com/3450/3382620367_07e20a2678_o.png") %>
 
 Rainbow adds following methods to String class:
 

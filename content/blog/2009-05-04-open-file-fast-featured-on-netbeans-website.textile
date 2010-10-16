@@ -1,8 +1,6 @@
----
 title: Open File Fast featured on Netbeans website
-created_at: 2009-05-04 21:00
+date: 2009-05-04 21:00
 tags: netbeans, off
----
 
 "Open File Fast":/projects/off has been chosen as "featured" plugin on Netbeans "website":http://netbeans.org. Cool! I hope number of plugin users will increase and I will get some more feedback about it. 
 

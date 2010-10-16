@@ -1,0 +1,34 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    RedCloth (4.2.3)
+    builder (2.1.2)
+    daemons (1.1.0)
+    eventmachine (0.12.10)
+    rack (1.2.1)
+    rdiscount (1.6.5)
+    rubypants (0.2.0)
+    sinatra (1.0)
+      rack (>= 1.0)
+    sinatra-outputbuffer (0.1.0)
+      sinatra (>= 1.0.a)
+    sinatra-tags (0.1.1)
+      sinatra (>= 1.0)
+      sinatra-outputbuffer (>= 0.1.0)
+    thin (1.2.7)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  RedCloth
+  builder
+  bundler
+  rdiscount
+  rubypants
+  sinatra
+  sinatra-tags
+  thin

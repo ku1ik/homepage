@@ -1,8 +1,6 @@
----
 title: Coderack, a Rack middleware contest launched
-created_at: 2009-10-15 14:51
+date: 2009-10-15 14:51
 tags: ruby, rack, middleware, contest
----
 
 You've probably heard about "Rack":http://rack.rubyforge.org/, right? Few months ago during the conversation with my teammate about potential and possibilities of Rack, and Rack middleware we've came up with an idea of creating some coding contest. We wanted to encourage Ruby developers to explore the power of Rack because we believe it's the best thing since sliced bread. And what better way than to hold a contest? And now we can proudly say that it happened! We've just launched it and got really positive feedback about it so far.
 

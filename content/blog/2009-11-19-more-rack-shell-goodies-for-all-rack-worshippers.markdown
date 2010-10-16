@@ -1,8 +1,6 @@
----
 title: More Rack::Shell goodies for all Rack worshippers
-created_at: 2009-11-19 21:03
+date: 2009-11-19 21:03
 tags: racksh, rack, ruby, console
----
 
 _Rack::Shell_ got a lot of attention lately and I received some feature requests/ideas from great ruby hackers. [Daniel Neighman](http://github.com/hassox), currently working on [Pancake](http://pancakestacks.wordpress.com/2009/11/19/pancakes-console/), pointed me towards Bryan Helmkamp's [rack-test](http://github.com/brynary/rack-test). This awesome piece of code is now used by _racksh_ to simulate HTTP requests to your Rack application. Yay!
 

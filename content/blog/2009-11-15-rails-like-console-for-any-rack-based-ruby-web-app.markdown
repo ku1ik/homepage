@@ -1,8 +1,6 @@
----
 title: Rails-like console for any Rack based ruby web app
-created_at: 2009-11-15 12:15
+date: 2009-11-15 12:15
 tags: racksh, rack, ruby, console, sinatra, merb, rails
----
 
 I always miss script/console from Rails while developing my Sinatra apps, especially ones built with DataMapper where I need to auto-migrate my db. Sinatra doesn't come with any comparable solution as it's not a full framework, but rather library for creating simple web apps. Recently I tried [Heroku](http://heroku.com/) platform and their "heroku console" command inspired me to create something similar - _racksh_ aka _Rack::Shell_.
 

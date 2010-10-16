@@ -1,8 +1,6 @@
----
 title: Open File Fast - Netbeans plugin for quick opening project files
-created_at: 2009-02-26 23:36
+date: 2009-02-26 23:36
 tags: netbeans, off, textmate
----
 
 Textmate has nice feature which is a real timesaver. It's quick open file dialog. You can type only several characters of filename you are searching for and you get list of all files matching your pattern. When you are looking for FooBar.java you can type _fbj_ and you will find it. It really helps navigating through the project (especially bigger ones).
 

@@ -1,8 +1,7 @@
----
 title: Open3 And The PID Of The Spawn
-created_at: 2010-09-18 19:20
+date: 2010-09-18 19:20
 tags: ruby, system, mri, rubinius, jruby
----
+img: http://farm4.static.flickr.com/3182/2715910858\_e70a4891e2.jpg
 
 Open3 is a standard way of starting subprocess from ruby if you need IO objects for stdin, stdout and/or sterr.
 It goes like this:

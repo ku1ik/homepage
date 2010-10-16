@@ -1,8 +1,6 @@
----
 title: Rack middleware showing git or svn revision
-created_at: 2009-05-31 21:05
+date: 2009-05-31 21:05
 tags: gem, git, merb, middleware, rack, rails, ruby, svn
----
 
 Rack is fun. Really, lots of fun. After creating "middleware for showing markup errors":/blog/2009/05/10/rack-middleware-using-html-tidy.html and viewing several presentations related to Rack I was thinking about Rack's potential. And it's big. The result of my thinking (and a little coding) is another middleware.
 
