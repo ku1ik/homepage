@@ -175,6 +175,7 @@ a:hover {
 
 #header .home {
   position: absolute;
+  left: 0;
 }
 
 ul.nav, .nav li {
