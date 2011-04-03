@@ -2,10 +2,11 @@ class Post
   attr_reader :title, :content, :slug, :meta, :content
 
   def self.all
-    unless @all
+    if @all.nil? || ENV['RACK_ENV'] != 'production'
       @all = Dir["content/blog/*"].map { |filename| Post.new(filename) }.reject { |p| p.meta[:draft] }
       @all = @all.sort_by { |p| p.meta[:date] }.reverse
     end
+
     @all
   end
 
