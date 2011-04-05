@@ -52,12 +52,16 @@ h3 {
   margin: 25px 0 15px;
 }
 
-ul {
+ul, ol {
   margin: 15px 0 30px 30px;
 }
 
-li {
+ul li {
   list-style-type: square;
+}
+
+ol li {
+  list-style-type: decimal;
 }
 
 p, pre {
