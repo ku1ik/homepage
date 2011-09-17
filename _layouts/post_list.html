@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<h2>{{ page.header }}</h2>
+
+<ul class="post-list">
+{{ content }}
+</ul>
+
+{% if page.url == '/index.html' %}
+  <p class="rss-feed">
+    <a href="http://feeds.feedburner.com/SickillNet" class="feed">Subscribe via RSS</a>
+  </p>
+{% endif %}

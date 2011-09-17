@@ -1,0 +1,57 @@
+---
+title: Archlinux + Nginx + Passenger
+layout: post
+tags:
+  - archlinux
+  - deployment
+  - nginx
+  - passenger
+  - ruby
+---
+
+*UPDATE*: _I've added this package to "AUR":http://aur.archlinux.org. You can grab it "here":http://aur.archlinux.org/packages.php?ID=28185 if you prefer to build it from AUR. Note: it automatically builds passenger's nginx module so step 2. is not needed for it, you only need to have passenger gem installed._
+
+If someone needs to setup "Nginx":http://wiki.nginx.org web server with "Passenger":http://www.modrails.com/ support quick on "Archlinux":http://archlinux.org/ here are few simple steps to get it running in minutes.
+
+1. Make sure you have the latest Passenger gem installed:
+
+<pre><code>sudo gem install passenger</code></pre>
+
+2. Compile Passenger module for Nginx:
+
+<pre><code>cd `passenger-config --root`; sudo rake nginx</code></pre>
+
+3. Download this "PKGBUILD":https://github.com/downloads/sickill/archlinux-nginx-passenger/archlinux-nginx-passenger.tgz (modified PKGBUILD of nginx-0.7.61-1 from community repository with passenger module added)
+
+4. Unpack and build package (if running as non-root be sure you have fakeroot package installed):
+
+<pre><code>tar xf archlinux-nginx-passenger.tgz
+cd nginx
+makepkg</code></pre>
+
+5. Install package:
+
+<pre><code>sudo pacman -U nginx-0.7.61-1-i686.pkg.tar.gz</code></pre>
+
+6. Set Passenger's root directory in /etc/nginx/conf/nginx.conf:
+
+<pre><code>http {
+  ...
+  passenger_root /usr/lib/ruby/gems/1.8/gems/passenger-2.2.4;
+  ...
+}
+</code></pre>
+
+7. Enable Passenger in your vhost:
+
+<pre><code>server {
+  listen 80;
+  server_name foo.bar.net;
+  root /var/www/foo.bar.net/public;
+  passenger_enabled on;
+}
+</code></pre>
+
+Restart nginx and that's it. Now your Arch can serve ruby apps under Passenger. 
+
+Kudos for "Phusion":http://phusion.nl guys for creating such simple and really good working solution for hassle-free deployment!

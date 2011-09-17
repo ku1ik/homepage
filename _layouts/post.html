@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="post">
+  <div class="header">
+    <h2>"{{ page.title }}"</h2>
+    <p class="date">{{ page.date | date:'%B %d, %Y' }}</p>
+    {% if page.img %}
+      <img src="{{ page.img | replace:'\_','_' }}" />
+    {% endif %}
+  </div>
+  <div class="body">
+    {{ content }}
+  </div>
+  {% include post_tags.html %}
+</div>

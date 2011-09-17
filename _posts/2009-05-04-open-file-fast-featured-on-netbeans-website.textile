@@ -1,0 +1,11 @@
+---
+title: Open File Fast featured on Netbeans website
+layout: post
+tags:
+  - netbeans
+  - 'off'
+---
+
+"Open File Fast":/projects/off has been chosen as "featured" plugin on Netbeans "website":http://netbeans.org. Cool! I hope number of plugin users will increase and I will get some more feedback about it. 
+
+And as for feedback, I've recently heard that OFF has some problems on newest versions of Netbeans (nightly builds and 6.7 beta). Last version which I've tested on was 6.7 M2 and then it worked. But as 6.7 final is comming (I hope Sun takeover by Oracle will not delay the release) I will investigate the problems and hopefully resolve them as soon as I will have some free time.

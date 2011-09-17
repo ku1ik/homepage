@@ -1,0 +1,10 @@
+---
+layout: post_list
+header: Year <em>{{subject}}</em>
+---
+
+{% for post in site.posts %}
+  {% if page.subject == post.date_year %}
+    {% include post_link.html %}
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,6 @@
+{% unless page.tags == empty %}
+<div class="tags">
+  Read more about
+  {{ page.tags | sort | collect: '<a href="/topics/[item]">[item]</a>' | join: ', ' }}.
+</div>
+{% endunless %}

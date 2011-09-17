@@ -1,0 +1,10 @@
+---
+layout: post_list
+header: writings on <em>{{subject}}</em>
+---
+
+{% for post in site.posts %}
+  {% if post.tags contains page.subject %}
+    {% include post_link.html %}
+  {% endif %}
+{% endfor %}

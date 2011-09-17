@@ -1,0 +1,8 @@
+---
+layout: post_list
+header: latest writings
+---
+
+{% for post in site.posts limit: 20 %}
+  {% include post_link.html %}
+{% endfor %}

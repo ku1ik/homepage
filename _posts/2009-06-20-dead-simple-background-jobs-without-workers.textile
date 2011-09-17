@@ -1,0 +1,10 @@
+---
+title: Dead simple background jobs without workers
+tags:
+  - asynchronous
+  - processing
+  - ruby
+published: false
+---
+
+<script src="http://gist.github.com/131538.js"></script>

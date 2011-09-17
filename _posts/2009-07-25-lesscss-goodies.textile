@@ -1,0 +1,43 @@
+---
+title: LessCSS goodies
+layout: post
+tags:
+  - gem
+  - middleware
+  - css
+  - lesscss
+  - rack
+  - ruby
+---
+
+If you haven't heard about LessCSS then "check it out":http://lesscss.org/, really cool solution for writing css code in concise way. I'm planning to use it in some of my projects (and probably for this blog's styles) and I've created two tools which could ease my work with LessCSS.
+
+First tool, *css2less*, is CSS-to-LessCSS converter. Of course it can't use all of LessCSS features because only programmer knows where to use variables and other stuff properly for specific project. However what it can do is to find all rules that can be nested and outputs them for given css file.
+
+Grab it from "github":http://github.com/sickill/css2less/tree/master and use like that:
+
+<pre><code>ruby css2less.rb my.css > my.less</code></pre>
+
+You will get .less file with all styles from original .css file but with nested rules notation. It's a good start for further tweaking, ie adding variables.
+
+Second tool, *rack-lesscss*, is a "Rack":http://rack.rubyforge.org/ middleware which converts .less files into .css files on the fly during request. It's main purpose is to ease development stage when you change your .less files frequently. With rack-lesscss middleware enabled you don't need to compile .less files by hand after every change. LessCSS compiler has an option to watch for changes in .less file and automatically recompiles it but you need to remember to run compiler in watch mode for every stylesheet every time you start development session. There are also at least two Rails plugins which nicely integrates LessCSS into the app but this middleware can be used with Rails as well as with other ruby web frameworks like Merb or Sinatra.
+
+Install gem:
+
+<pre><code>sudo gem install --source http://gems.github.com sickill-rack-lesscss</code></pre>
+
+or grab it from "github":http://github.com/sickill/rack-lesscss/tree/master.
+
+Enable by adding following to your rackup file (config.ru, or config/rack.rb in Merb app):
+
+<pre><code>require 'rack-lesscss'
+use Rack::LessCss, :less_path => File.join(APP_ROOT, "public", "css"), :css_route => "/css"</code></pre>
+
+Above code will enable on-the-fly .less files compilation for all requests matching _/css/*.css_.
+
+It accepts two arguments:
+
+* <em>:less_path</em> - directory where source .less files are stored (required)
+* <em>:css_route</em> - route which this middleware will handle (optional, default is <em>/stylesheets</em>)
+
+And don't use it on production for obvious reason :) It's meant to be used for development only.

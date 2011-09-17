@@ -1,0 +1,1 @@
+{{ site.posts | map:'date' | map:'year' | uniq | sort | collect: '<a href="/[item]/">[item]</a> ' }}

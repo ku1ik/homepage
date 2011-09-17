@@ -1,0 +1,15 @@
+---
+title: Quick update on Open File Fast 1.0.1
+layout: post
+tags:
+  - 'off'
+  - jedit
+  - netbeans
+---
+
+This is really short update on OpenFileFast. Recently new JEdit (4.3 final with new ProjectViewer plugin) and Netbeans (6.9RC2) came out and they've both changed some APIs. The changes were not backwards compatible and OFF stopped working for them. Fortunately the fix was simple and I've prepared updated builds of the plugin for JEdit and NB.
+
+Here are the links for 1.0.1 update:
+
+Netbeans NBM package: "off-netbeans-1.0.1.nbm":https://github.com/downloads/sickill/off-plugin/off-netbeans-1.0.1.nbm"
+JEdit jar file: "off-jedit-1.0.1.jar":https://github.com/downloads/sickill/off-plugin/off-jedit-1.0.1.jar"

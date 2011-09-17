@@ -1,0 +1,21 @@
+---
+title: Open File Fast reached 1.0
+layout: post
+tags:
+  - 'off'
+  - jedit
+  - netbeans
+---
+
+After almost a year of development and several beta versions Open File Fast finally became stable and mature enough to bump its version to 1.0. There's not much new in this release except several bugfixes and improved look of search results list.
+
+Now it looks like this:
+
+<p class="images">!http://farm3.static.flickr.com/2722/4281138765_af0d6ecc0d_o.png!</p>
+
+Notice that entered characters are now displayed in bold indicating where they were found in each filename. File path is now right aligned and has lighter color. It doesn't come into way anymore when looking at results and lets you localize the file you seek even faster.
+
+Netbeans version of plugin was updated to work in Netbeans 6.8, JEdit's one works now in final JEdit 4.3 version (with ProjecViewer 2.9.1+).
+
+Netbeans NBM package: "off-netbeans-1.0.nbm":https://github.com/downloads/sickill/off-plugin/off-netbeans-1.0.nbm"
+JEdit jar file: "off-jedit-1.0.jar":https://github.com/downloads/sickill/off-plugin/off-jedit-1.0.jar"
