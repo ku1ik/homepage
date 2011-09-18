@@ -30,27 +30,27 @@ Here are the key features of Open File Fast:
 
 Let's see how it look in action. Invoke O-F-F from Netbeans' _Navigate_ menu (I recommend creating a keyboard shortcut for it in _Tools/Options/Keymap/Project_, I like ctrl+T). For example when you type _user_ you will get following results:
 
-<p class="images"><%= image("http://farm4.static.flickr.com/3624/3310658511_ef5bc0f1ba_m.jpg", "http://farm4.static.flickr.com/3624/3310658511_714139020a_o.png") %></p>
+<p class="images"><a href="http://farm4.static.flickr.com/3624/3310658511_714139020a_o.png" rel="lightbox"><img src="http://farm4.static.flickr.com/3624/3310658511_ef5bc0f1ba_m.jpg"></a></p>
 
 But what if you want to open <em>users_helper.rb</em> file? Just type _ush_ and you will find it!
 
-<p class="images"><%= image("http://farm4.static.flickr.com/3339/3310658593_b6e7962299_m.jpg", "http://farm4.static.flickr.com/3339/3310658593_8c65b1f5bf_o.png") %></p>
+<p class="images"><a href="http://farm4.static.flickr.com/3339/3310658593_8c65b1f5bf_o.png" rel="lightbox"><img src="http://farm4.static.flickr.com/3339/3310658593_b6e7962299_m.jpg"></a></p>
 
 If you know that something you need is in some javascript file you can show all js files by entering _*.js_.
 
-<p class="images"><%= image("http://farm4.static.flickr.com/3581/3310658771_3cb70c5cb2_m.jpg", "http://farm4.static.flickr.com/3581/3310658771_ce4c88b990_o.png") %></p>
+<p class="images"><a href="http://farm4.static.flickr.com/3581/3310658771_ce4c88b990_o.png" rel="lightbox"><img src="http://farm4.static.flickr.com/3581/3310658771_3cb70c5cb2_m.jpg"></a></p>
 
 When you want to narrow down your search to specific directory just type some parts of directories' names separated by slashes. For example when looking for files in directory _app/models_ (under project root) type _a/m/_. 
 
-<p class="images"><%= image("http://farm4.static.flickr.com/3658/3311489548_a6449ce2d9_m.jpg", "http://farm4.static.flickr.com/3658/3311489548_de299abf9d_o.png") %><%= image("http://farm4.static.flickr.com/3350/3311489598_945ab8d6ba_m.jpg", "http://farm4.static.flickr.com/3350/3311489598_187ca4f7ff_o.png") %></p>
+<p class="images"><a href="http://farm4.static.flickr.com/3658/3311489548_de299abf9d_o.png" rel="lightbox"><img src="http://farm4.static.flickr.com/3658/3311489548_a6449ce2d9_m.jpg"></a><a href="http://farm4.static.flickr.com/3350/3311489598_187ca4f7ff_o.png" rel="lightbox"><img src="http://farm4.static.flickr.com/3350/3311489598_945ab8d6ba_m.jpg"></a></p>
 
 Matching algorithm by default starts searching for pattern at the start of filename, but if you want to search for pattern anywhere in filename (like in Textmate) you can change it in options. Here we are searching for _proj_ and the results list contains also filenames not starting with _proj_.
 
-<p class="images"><%= image("http://farm4.static.flickr.com/3424/3310659061_ba12c6c208_m.jpg", "http://farm4.static.flickr.com/3424/3310659061_686ab1532b_o.png") %></p>
+<p class="images"><a href="http://farm4.static.flickr.com/3424/3310659061_686ab1532b_o.png" rel="lightbox"><img src="http://farm4.static.flickr.com/3424/3310659061_ba12c6c208_m.jpg"></a></p>
 
 Open File Fast can be set up to your own preferences and to match your own workflow. You can configure it under _Open File Fast_ tab in Netbeans' _Miscellaneous_ options:
 
-<p class="images"><%= image("http://farm4.static.flickr.com/3567/3311489750_d487b3da51_m.jpg", "http://farm4.static.flickr.com/3567/3311489750_306e760e2e_o.png") %></p>
+<p class="images"><a href="http://farm4.static.flickr.com/3567/3311489750_306e760e2e_o.png" rel="lightbox"><img src="http://farm4.static.flickr.com/3567/3311489750_d487b3da51_m.jpg"></a></p>
 
 Grab it here: "off-netbeans-0.9.3.nbm":https://github.com/downloads/sickill/off-plugin/off-netbeans-0.9.3.nbm". If you want to help or just look into sources they're on "github":http://github.com/sickill/off-plugin/tree/master .
 This is the first public version of this plugin so it could have some bugs, however we've been using it for a while now with my workmates and nothing exploded yet :)

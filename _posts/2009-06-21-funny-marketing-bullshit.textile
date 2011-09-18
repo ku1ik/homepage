@@ -11,7 +11,7 @@ Few days ago my workmates sent me a link to latest microsoft IE8 propaganda arti
 
 I thought: this is so funny, I'll bookmark it as some 'funny' stuff. So I opened delicious.com bookmark dialog and saw 'Recommended' and 'Popular' tags lists. Look at this:
 
-<p class="images"><%= image("http://farm4.static.flickr.com/3348/3646899607_5315160a3c.jpg", "http://farm4.static.flickr.com/3348/3646899607_c802abbc59_o.png") %></p>
+<p class="images"><a href="http://farm4.static.flickr.com/3348/3646899607_c802abbc59_o.png" rel="lightbox"><img src="http://farm4.static.flickr.com/3348/3646899607_5315160a3c.jpg"></a></p>
 
 Funny, marketing, bullshit, humor. I had exactly this in mind when I was opening bookmark dialog. Smile appeared on my face. If those tags are recommended by delicious it means that good percentage of people take it as bullshit. That's nice. I've opened "delicious page for this brainwash":http://delicious.com/url/8f2961b515d9634beeda3eb6b4abd05d to check how many people bookmarked it:
 

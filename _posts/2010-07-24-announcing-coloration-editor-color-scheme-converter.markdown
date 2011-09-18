@@ -18,7 +18,7 @@ or you just envy Textmate users for their good looking, dark themes now you have
 
 Here's how Vim with Sunburst theme looks like:
 
-<%= image("/images/posts/gvim-sunburst-small.png", "/images/posts/gvim-sunburst.png") %>
+<a href="/images/posts/gvim-sunburst.png" rel="lightbox"><img src="/images/posts/gvim-sunburst-small.png"></a>
 
 If you want to give Coloration a try you have two options. Either you can use online version at [coloration.sickill.net](http://coloration.sickill.net/)
 or you can install ruby gem _coloration_:
