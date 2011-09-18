@@ -8,18 +8,39 @@ layout: default
 
 My name is Marcin Kulik.
 
-I graduated from the Akademia Górniczo-Hutnicza in Cracow, Poland with a master's degree in computer science.
-I live in Cracow and I'm senior developer at [Lunar Logic Polska](http://lunarlogicpolska.com), one of Poland's largest and most experienced agile Ruby on Rails development teams.
+I graduated from the [AGH University of Science and
+Technology](http://agh.edu.pl/en) in Cracow, Poland with a master's degree in
+computer science.  I live in Cracow and I'm senior developer at [Lunar Logic
+Polska](http://lunarlogicpolska.com), one of Poland's largest and most
+experienced agile Ruby on Rails development teams.
 
-I breathe HTTP. I was dealing with wide variety of web and distributed applications for several years, in various languages like Ruby, Python, Java and PHP. I'm experienced web developer with tens of web applications developed (and deployed on various setups) since now. Currently I use Ruby (and Rails) as my primary and prefered tool for building my apps.
+I breathe HTTP. I was dealing with wide variety of web and distributed
+applications for last 10 years, in various languages like Ruby, Python and
+Java. I'm experienced developer with tens of web applications developed and
+deployed in various setups.
 
-I have also experience in developing distributed, high-availability, multithreaded Java server-side apps working at 24/7/365, system daemons and even tools that help programmers do their job.
+Currently I use Ruby (and Rails) as my primary and preferred tool for building
+my apps. You could have seen on me on local [KRUG](http://ruby.org.pl/)
+meetings or on [EuRuKo 2010 conference](http://euruko2010.org/) where I was
+giving [presentation](http://vimeo.com/12665769) about interesting
+[Rack](http://rack.rubyforge.org/) stuff.
 
-I always try to use right tool for right job and that's why I like to try out new technologies. And I like to have a choice. I like open standards. So I chose open source software for my everyday use. I'm happy Linux user since 1999.
+I also have experience in building distributed, high-availability,
+multi-threaded Java server-side apps working at 24/7/365, system daemons and
+tools that help programmers do their job.
+
+I always try to use right tool for the right job. That's why I'm always eager
+to learn new technologies.
+
+Oh, and I like to have a choice. I'm big open standards proponent and
+open-source contributor. I use OSS software for my everyday use. I'm happy
+Linux user since 1999.
 
 ### My code in the wild
 
-You can find my open-source projects on [Github](http://github.com/sickill) and [BitBucket](http://bitbucket.org/sickill). Here are few of many:
+On [Github](http://github.com/sickill) and
+[BitBucket](http://bitbucket.org/sickill) you can find my 30+ open-source
+projects and many contributions to popular projects. Here are few of many:
 
 * [racksh](https://github.com/sickill/racksh)
 * [rainbow](https://github.com/sickill/rainbow)
@@ -30,8 +51,8 @@ You can find my open-source projects on [Github](http://github.com/sickill) and 
 
 jabber: **m {at} ku1ik . com**<br>
 irc (freenode): **sickill**<br>
-twitter: <%= link_to 'twitter.com/sickill', 'http://www.twitter.com/sickill', :class=> "twitter" %><br>
-identi.ca: <%= link_to 'identi.ca/sickill', 'http://identi.ca/sickill', :class => 'identica' %>
+twitter: [twitter.com/sickill](http://www.twitter.com/sickill)<br>
+identi.ca: [identi.ca/sickill](http://identi.ca/sickill)
 
 ### Want to know more about me? Check out these:
 
