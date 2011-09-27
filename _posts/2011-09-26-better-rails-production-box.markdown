@@ -131,7 +131,7 @@ It will make sure that when _maintenance.html_ file is there Nginx will serve
 it and return 503 (Service unavailable) HTTP status. Proper response status is
 important here as it gives search engines the message: don't index me now
 please, come back later. You don't want your maintenance page get indexed,
-don't you?
+do you?
 
 Above Nginx config also allows assets to be served as usual when maintenance
 mode is on - especially useful if you don't host them on separate host/subdomain
