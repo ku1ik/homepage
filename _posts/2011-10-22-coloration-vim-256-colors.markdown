@@ -40,6 +40,7 @@ Twilight theme converted from Textmate theme:
 ![Twilight theme in Vim](https://github.com/downloads/sickill/coloration/twilight-comparison.png)
 
 Now [go convert](http://coloration.sickill.net/) your old, dusty Textmate
-themes. Oh, and I've put Sunburst on github
-([vim-sunburst](https://github.com/sickill/vim-sunburst)) for all you lazy
+themes. Oh, and I've put Sunburst and Monokai themes on github
+([vim-sunburst](https://github.com/sickill/vim-sunburst),
+[vim-monokai](https://github.com/sickill/vim-monokai)) for all you lazy
 guys.
