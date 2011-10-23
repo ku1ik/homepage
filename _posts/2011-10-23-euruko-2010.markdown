@@ -1,0 +1,18 @@
+---
+title: My EuRuKo 2010 talk
+layout: post
+tags:
+  - euruko
+  - presentation
+---
+
+I was speaking at [EuRuKo conference](http://euruko2010.org/) last year (2010)
+and I'm just throwing this up for archiving purposes.
+
+Here's a video of the talk:
+
+<iframe src="http://player.vimeo.com/video/12665769?title=0&amp;byline=0&amp;portrait=0&amp;color=f0004c" width="555" height="312" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+
+And here are the (slightly updated) slides:
+
+<script src="http://speakerdeck.com/embed/4ea40c5caaf429005100c2c0.js"></script>
