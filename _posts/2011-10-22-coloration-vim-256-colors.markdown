@@ -6,9 +6,9 @@ tags:
   - coloration
 ---
 
-Year has passed since last Coloration release. Time has come for new
-improvements. Brand new Coloration v0.3.1 focuses on Vim theme writer and
-includes:
+Year has passed since last [Coloration](http://coloration.sickill.net/)
+update. Time has come for new improvements. Brand new Coloration v0.3.1
+focuses on Vim theme writer and includes:
 
 * Line numbering (`LineNr`) background matching cursor line highlight style
   (`CursorLine`)

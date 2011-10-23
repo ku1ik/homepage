@@ -43,6 +43,7 @@ On [Github](http://github.com/sickill) and
 projects and many contributions to popular projects. Here are few of many:
 
 * [racksh](https://github.com/sickill/racksh)
+* [git-dude](https://github.com/sickill/git-dude)
 * [rainbow](https://github.com/sickill/rainbow)
 * [coloration](https://github.com/sickill/coloration)
 * [OpenFileFast](https://github.com/sickill/off-plugin)
