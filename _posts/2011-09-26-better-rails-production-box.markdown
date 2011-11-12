@@ -15,7 +15,7 @@ Here are 3 simple things to do in order to improve deployment process of your
 Rails application and friendliness of your production server. Nothing new here
 but many good practices are often overlooked even by experienced developers.
 
-### Set RAILS\_ENV in .bash\_profile
+## Set RAILS\_ENV in .bash\_profile
 
 I see my fellow devs typing this on production server all the time:
 
@@ -37,7 +37,7 @@ automatically. But if you're on self-managed VPS or
 [EC2](http://aws.amazon.com/ec2/) instance you can ease your work with this
 trivial setup.
 
-### Use logrotate
+## Use logrotate
 
 Create _/etc/logrotate.d/rails\_logs_ file with following content:
 
@@ -60,7 +60,7 @@ Don't forget about this one if you manage production box yourself. And do it
 when you initially setup the box, not "later". "Later" often means "when app is
 down due to not enough disk space". Srsly.
 
-### Use maintenance page
+## Use maintenance page
 
 When deploying with long running or non-trivial (more than add column)
 migrations you should use maintenance page of some sort. With capistrano you

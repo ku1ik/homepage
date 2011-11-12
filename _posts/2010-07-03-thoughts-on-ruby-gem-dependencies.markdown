@@ -8,7 +8,7 @@ tags:
 img: http://farm4.static.flickr.com/3004/3301816514\_6317e3d08b.jpg
 ---
 
-### The problem
+## The problem
 
 Having [gem bundler](http://gembundler.com) is great. First, you can forget about gem version collisions (damn you activation errors!). Second, you can forget about manually installing gems on all your machines. Third, you can use git repositories and local directories as gem sources which is neat and is invaluable when working on your own gems. But bundler is a workaround. Yes, it's a workaround for poor rubygems design. Let's look at few examples of the problems I've noticed.
 
@@ -41,7 +41,7 @@ Third rubygems issue is something in the middle between dm-paperclip+bundler pro
 
 It'd be probably better to put integration code in separate gems. This way people involved in development of ORMs could work on integration without access to Devise repository. Yeah, I know, it's not a big deal on github, just fork and send pull request. But it worked really well for dm-rails. DataMapper guys were more interested in getting DM work under Rails 3 than Rails developers and they definitely knew more about DM specifics. They provide the gem and everyone is happy. But if there were many gems providing this functionality for Devise then user would be responsible for installing it. There's better solution on my mind though, read on.
 
-### Possible solutions
+## Possible solutions
 
 To solve first mentioned issue let's just add optional dependencies to rubygems. It could work in following way.
 
@@ -151,6 +151,6 @@ Another example why "provider gems" can be good idea is extlib / AS collision. F
       s.provides "..."
     end
 
-### Conclusion
+## Conclusion
 
 I realize that these proposed solutions are not ideal and there are some edge cases which need some more thought but maybe it will become a good start for further discussion about the problem. [Rubygems code is on github now](http://github.com/rubygems/rubygems) so we can fork it and improve it!

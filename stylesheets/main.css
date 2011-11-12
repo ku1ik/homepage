@@ -38,7 +38,7 @@ h1, h2, h3 {
 /*   padding-left: 10px; */
 /* } */
 
-h2 {
+h1 {
   font-size: 33px;
   line-height: 40px;
   margin: 17px 0;
@@ -47,9 +47,15 @@ h2 {
   text-align: center;
 }
 
-h3 {
+h2 {
   font-size: 21px;
   margin: 25px 0 15px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 20px 0 12px;
+  color: #D95525;
 }
 
 ul, ol {

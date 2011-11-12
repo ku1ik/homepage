@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## About me
+# About me
 
 <img src="/images/photo.jpg" class="about-me-photo">
 
@@ -36,7 +36,7 @@ Oh, and I like to have a choice. I'm big open standards proponent and
 open-source contributor. I use OSS software for my everyday use. I'm happy
 Linux user since 1999.
 
-### My code in the wild
+## My code in the wild
 
 On [Github](http://github.com/sickill) and
 [BitBucket](http://bitbucket.org/sickill) you can find my 30+ open-source
@@ -48,14 +48,14 @@ projects and many contributions to popular projects. Here are few of many:
 * [coloration](https://github.com/sickill/coloration)
 * [OpenFileFast](https://github.com/sickill/off-plugin)
 
-### How/where to reach me?
+## How/where to reach me?
 
 jabber: **m {at} ku1ik . com**<br>
 irc (freenode): **sickill**<br>
 twitter: [twitter.com/sickill](http://www.twitter.com/sickill)<br>
 identi.ca: [identi.ca/sickill](http://identi.ca/sickill)
 
-### Want to know more about me? Check out these:
+## Want to know more about me? Check out these:
 
 [LinkedIn](http://www.linkedin.com/in/marcinkulik)
 [Last.fm](http://www.last.fm/user/sikkill)
