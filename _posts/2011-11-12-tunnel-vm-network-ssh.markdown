@@ -152,7 +152,7 @@ First on on my local machine (H):
 
     # vm-tunnel.sh
 
-    ssh -o Tunnel=ethernet -w 0:0 root@<P hostname> "~/taptap.sh"
+    ssh -o Tunnel=ethernet -w 0:0 -f root@<P hostname> "~/taptap.sh"
     ifconfig tap0 up
 
 Second one on proxy machine (P) in root's home:
