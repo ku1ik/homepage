@@ -152,20 +152,20 @@ First on on my local machine (H):
 
     # vm-tunnel.sh
 
-    $ ssh -o Tunnel=ethernet -w 0:0 root@<P hostname> "~/taptap.sh"
-    $ ifconfig tap0 up
+    ssh -o Tunnel=ethernet -w 0:0 root@<P hostname> "~/taptap.sh"
+    ifconfig tap0 up
 
 Second one on proxy machine (P) in root's home:
 
     # /root/taptap.sh
 
-    $ echo 1 > /proc/sys/net/ipv4/ip_forward
-    $ /usr/sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-    $ /usr/sbin/iptables -A FORWARD -i eth0 -o tap0 -m state --state RELATED,ESTABLISHED -j ACCEPT
-    $ /usr/sbin/iptables -A FORWARD -i tap0 -o eth0 -j ACCEPT
+    echo 1 > /proc/sys/net/ipv4/ip_forward
+    /usr/sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+    /usr/sbin/iptables -A FORWARD -i eth0 -o tap0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+    /usr/sbin/iptables -A FORWARD -i tap0 -o eth0 -j ACCEPT
 
-    $ ifconfig tap0 up
-    $ ifconfig tap0 192.168.0.1 netmask 255.255.255.0
+    ifconfig tap0 up
+    ifconfig tap0 192.168.0.1 netmask 255.255.255.0
 
 Thanks to these 2 scripts I can summon my VPN with one command:
 
