@@ -7,7 +7,7 @@ tags:
   - zsh
 ---
 
-"AUTOMATE ALL THE THINGS!" one would say. "Time is money." other would say.
+"AUTOMATE ALL THE THINGS!" one would say. "Time is money" other would say.
 "Don't make me think" another smart one would say. "Computers are our slaves and
 we should put as much work as we can on their circuits" I say.
 
