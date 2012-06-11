@@ -317,3 +317,8 @@ a.feed {
 blockquote p {
   margin: 17px 0;
 }
+
+#oh-404 {
+  font-size: 300px;
+  line-height: 300px;
+}
