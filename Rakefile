@@ -14,8 +14,8 @@ task :server do
 end
 
 desc 'Build and deploy'
-task :deploy => :build do
-  sh 'rsync -rtzh --progress --delete _site/ homepage:/var/www/homepage/'
+task :deploy do
+  sh %(rm -rf _site && git checkout deploy && jekyll && git add -f _site && git commit -m "Deploy at #{Time.now.to_i}" && git checkout master && git push heroku deploy:master)
 end
 
 def jekyll(opts = '')
