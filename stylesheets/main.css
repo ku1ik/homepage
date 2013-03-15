@@ -254,6 +254,10 @@ ul.nav {
 #footer .year {
 }
 
+#disqus_thread {
+  padding-top: 30px;
+}
+
 #disqus_thread #dsq-content .dsq-options {
   /* display: none; */
 }
