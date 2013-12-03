@@ -14,27 +14,27 @@ computer science.  I live in Cracow and I'm senior developer at [Lunar Logic
 Polska](http://lunarlogicpolska.com), one of Poland's largest and most
 experienced agile Ruby on Rails development teams.
 
-I breathe HTTP. I was dealing with wide variety of web and distributed
-applications for last 10 years, in various languages like Ruby, Python and
-Java. I'm experienced developer with tens of web applications developed and
-deployed in various setups.
+I live and breathe HTTP. I have been dealing with a wide variety of web and
+distributed applications for the last 10 years, in various languages like Ruby,
+Python and Java. I'm an experienced developer with tens of web applications
+developed and deployed in various setups.
 
 Currently I use Ruby (and Rails) as my primary and preferred tool for building
-my apps. You could have seen on me on local [KRUG](http://ruby.org.pl/)
-meetings or on [EuRuKo 2010 conference](http://euruko2010.org/) where I was
-giving [presentation](http://vimeo.com/12665769) about interesting
+my apps. You could have seen me at a local [KRUG](http://ruby.org.pl/) meetings
+or at [EuRuKo 2010 conference](http://euruko2010.org/) conference where I gave a
+[presentation](http://vimeo.com/12665769) about interesting
 [Rack](http://rack.rubyforge.org/) stuff.
 
 I also have experience in building distributed, high-availability,
 multi-threaded Java server-side apps working at 24/7/365, system daemons and
 tools that help programmers do their job.
 
-I always try to use right tool for the right job. That's why I'm always eager
-to learn new technologies.
+I always try to use the right tool for the right job. That's why I'm always
+eager to learn new technologies.
 
-Oh, and I like to have a choice. I'm big open standards proponent and
-open-source contributor. I use OSS software for my everyday use. I'm happy
-Linux user since 1999.
+Oh, and I like to have a choice. I'm a big open standards proponent and
+open-source contributor. I rely on OSS software for my everyday use. I'm a
+happy Linux user since 1999.
 
 ## My code in the wild
 
