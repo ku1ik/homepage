@@ -80,7 +80,7 @@ code {
 }
 
 pre, code {
-  font-family: 'bitstream vera sans mono', 'lucida console', 'courier new', monospace;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 13px;
 }
 
@@ -91,6 +91,7 @@ pre {
   background-color: #F9F9F9;
   color: #333;
   overflow: auto;
+  line-height: 1.5em;
 }
 
 pre code {
