@@ -1,1 +1,1 @@
-{{ site.posts | map:'date' | map:'year' | uniq | sort | collect: '<a href="/[item]/">[item]</a> ' }}
+{{ site.posts | map: 'to_liquid' | map: 'date_year' | uniq | sort | collect: '<a href="/[item]/">[item]</a> ' }}

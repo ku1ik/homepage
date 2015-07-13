@@ -5,17 +5,17 @@ task :default => :server
 
 desc 'Build site with Jekyll'
 task :build do
-  jekyll
+  jekyll build
 end
 
 desc 'Build and start server with --auto'
 task :server do
-  jekyll '--server --auto'
+  jekyll serve
 end
 
 desc 'Build and deploy'
 task :deploy do
-  sh %(rm -rf _site && jekyll && mv _site _site-new && git checkout deploy && git rm -r _site && mv _site-new _site && git add -f _site && git commit -m "Deploy at #{Time.now.to_i}" && git checkout master && git push heroku deploy:master)
+  sh %(rm -rf _site && jekyll build && mv _site _site-new && git checkout deploy && git rm -r _site && mv _site-new _site && git add -f _site && git commit -m "Deploy at #{Time.now.to_i}" && git checkout master && git push heroku deploy:master)
 end
 
 def jekyll(opts = '')

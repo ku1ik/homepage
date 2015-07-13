@@ -1,7 +1,7 @@
 url: http://ku1ik.com
 title: Odes of the Occult
 author: Marcin Kulik
-markdown: rdiscount
+markdown: redcarpet
 download_prefix: "http://dl.dropbox.com/u/12119988/blog"
 exclude:
   - Gemfile

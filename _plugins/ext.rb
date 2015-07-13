@@ -4,20 +4,16 @@ module Jekyll
 
   class Post
     # Convert this post into a Hash for use in Liquid templates.
-    #
-    # Returns <Hash>
-    def to_liquid
-      self.data.deep_merge({
-        "title"      => self.data["title"] || self.slug.split('-').select {|w| w.capitalize! || w }.join(' '),
-        "url"        => self.url,
-        "date"       => self.date,
-        "date_year"  => self.date.year,
-        "id"         => self.id,
-        "categories" => self.categories,
-        "next"       => self.next,
-        "previous"   => self.previous,
-        "tags"       => self.tags,
-        "content"    => self.content })
+
+    def to_liquid(attrs = nil)
+      further_data = Hash[(attrs || self.class::ATTRIBUTES_FOR_LIQUID).map { |attribute|
+        [attribute, send(attribute)]
+      }]
+
+      further_data["date_year"] = further_data["date"].year
+
+      data.deep_merge(further_data)
     end
   end
+
 end
