@@ -86,9 +86,8 @@ pre, code {
 
 pre {
   border: 1px solid;
-  border-left-width: 20px;
-  padding: 6px 4px 4px 10px;
-  color: #333;
+  padding: 10px;
+  color: #F8F8F2;
   overflow: auto;
   line-height: 1.5em;
 }
