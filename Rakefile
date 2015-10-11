@@ -5,12 +5,12 @@ task :default => :server
 
 desc 'Build site with Jekyll'
 task :build do
-  jekyll build
+  jekyll 'build'
 end
 
 desc 'Build and start server with --auto'
 task :server do
-  jekyll serve
+  jekyll 'serve -w'
 end
 
 desc 'Build and deploy'
