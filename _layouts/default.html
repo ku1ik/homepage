@@ -4,31 +4,39 @@
   {% include head.html %}
 </head>
 <body {% if page.id %}class="post"{% endif %}>
-  <div id="container" class="centered">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div id="header">
+          {% if page.url != '/index.html' %}
+          <a href="/" class="home" title="Go home!">&#x21E7;</a>
+          {% endif %}
+          <div class="logo"> <a href="/me" title="Who's Marcin?">MARCIN KULIK</a>'S: </div>
+        </div>
 
-    <div id="header">
-      {% if page.url != '/index.html' %}
-        <a href="/" class="home" title="Go home!">&#x21E7;</a>
-      {% endif %}
-      <div class="logo"> <a href="/me" title="Who's Marcin?">MARCIN KULIK</a>'S: </div>
+        <div id="content">
+          {{ content }}
+        </div>
+      </div>
     </div>
-
-    <div id="content">
-      {{ content }}
-    </div>
-
   </div>
 
   {% if page.id %}
-  <div id="lower">
-    <div class="comments centered">
-      {% include disqus.html %}
+  <div class="section" id="lower">
+    <div class="container comments">
+      <div class="row">
+        {% include disqus.html %}
+      </div>
     </div>
   </div>
   {% endif %}
 
-  <div id="footer" class="centered">
-    Browse through archives: {% include post_years.html %}
+  <div id="footer" class="section">
+    <div class="container">
+      <div class="row">
+        Browse through archives: {% include post_years.html %}
+      </div>
+    </div>
   </div>
 
   {% include analytics.html %}

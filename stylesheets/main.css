@@ -127,15 +127,19 @@ a:hover {
   text-decoration: none;
 }
 
-.centered {
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+/* full-width, vertical section */
+.section {
+  margin: 30px 0;
 }
 
-#container {
-  margin-top: 30px;
-  margin-bottom: 30px;
+/* main centered wrapper */
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0 40px;
 }
 
 .post .header {
@@ -156,6 +160,7 @@ a:hover {
   border: 1px solid #CCC;
   padding: 5px;
   border-radius: 5px;
+  max-width: 100%;
 }
 
 .post .body {
@@ -315,6 +320,11 @@ a.feed {
   display: block;
   margin-top: -44px;
   margin-left: 490px;
+}
+
+
+#content .body p img {
+  max-width: 100%;
 }
 
 blockquote p {
