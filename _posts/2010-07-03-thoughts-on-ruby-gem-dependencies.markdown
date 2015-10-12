@@ -5,7 +5,7 @@ tags:
   - ruby
   - rubygems
   - gem
-img: http://farm4.static.flickr.com/3004/3301816514\_6317e3d08b.jpg
+img: /images/posts/forks.jpg
 ---
 
 ## The problem

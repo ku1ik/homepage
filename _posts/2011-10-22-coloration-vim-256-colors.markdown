@@ -33,11 +33,11 @@ nearest equivalents with simple approximation.
 
 Sunburst theme converted from Textmate theme:
 
-![Sunburst theme in Vim](https://github.com/downloads/sickill/coloration/sunburst-comparison.png)
+![Sunburst theme in Vim](/images/posts/coloration-1.png)
 
 Twilight theme converted from Textmate theme:
 
-![Twilight theme in Vim](https://github.com/downloads/sickill/coloration/twilight-comparison.png)
+![Twilight theme in Vim](/images/posts/coloration-2.png)
 
 Now [go convert](http://coloration.sickill.net/) your old, dusty Textmate
 themes. Oh, and I've put Sunburst and Monokai themes on github

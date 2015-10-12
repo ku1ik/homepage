@@ -11,15 +11,12 @@ My post about Textmate to JEdit theme converter included example screenshots of 
 
 If you want to have highlighting for method names in your ruby code put following xml code into first __RULES__ block in your ruby.xml file:
 
-<pre>
-<!-- method, class and modules names -->
+<pre><code><!-- method, class and modules names -->
 <MARK_FOLLOWING TYPE="FUNCTION" MATCH_TYPE="KEYWORD1">def </MARK_FOLLOWING>
 <MARK_FOLLOWING TYPE="FUNCTION" MATCH_TYPE="KEYWORD1">class </MARK_FOLLOWING>
 <MARK_FOLLOWING TYPE="FUNCTION" MATCH_TYPE="KEYWORD1">module </MARK_FOLLOWING>
-</pre>
+</code></pre>
 
 Or just get mine "ruby.xml":https://gist.github.com/gists/1223942/download file, put it into your __.jedit/modes__ directory and add this to __.jedit/modes/catalog__ file:
 
-<pre>
-<MODE NAME="ruby" FILE="ruby.xml" FILE_NAME_GLOB="*.rb" />
-</pre>
+<pre><code><MODE NAME="ruby" FILE="ruby.xml" FILE_NAME_GLOB="*.rb" /></code></pre>

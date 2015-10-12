@@ -11,7 +11,7 @@ After almost a year of development and several beta versions Open File Fast fina
 
 Now it looks like this:
 
-<p class="images">!http://farm3.static.flickr.com/2722/4281138765_af0d6ecc0d_o.png!</p>
+<p class="images">!/images/posts/off-9.png!</p>
 
 Notice that entered characters are now displayed in bold indicating where they were found in each filename. File path is now right aligned and has lighter color. It doesn't come into way anymore when looking at results and lets you localize the file you seek even faster.
 

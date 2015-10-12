@@ -16,7 +16,7 @@ What's new?
 * Fixed bug with indexing files in newly added directories
 * Improved dialog layout a little
 
-<p class="images"><a href="http://farm3.static.flickr.com/2448/3551610613_db796e1339_o.png" rel="lightbox"><img src="http://farm3.static.flickr.com/2448/3551610613_9cb8cedcfb_m.jpg"></a></p>
+<p class="images"><img src="/images/posts/off-8.png"></p>
 
 I've tested this version under Netbeans 6.5 and 6.7beta and I didn't notice any problem, however if you encounter some issue let me know.
 

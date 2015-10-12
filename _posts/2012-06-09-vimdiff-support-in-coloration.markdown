@@ -13,8 +13,8 @@ based on Tango palette.
 
 Here's how GitHub color scheme looks in vimdiff:
 
-![GitHub](https://github.com/downloads/sickill/coloration/vimdiff-github.png)
+![GitHub](/images/posts/vimdiff-1.png)
 
 And Monokai's diff mode:
 
-![Monokai](https://github.com/downloads/sickill/coloration/vimdiff-monokai.png)
+![Monokai](/images/posts/vimdiff-2.png)

@@ -6,7 +6,6 @@ tags:
   - rails
   - resque
   - gem
-img: "http://farm3.static.flickr.com/2348/2428020695\_a2e86741d0\_m\_d.jpg"
 ---
 
 It's no secret that handling HTTP requests should be quick. Very quick. Your

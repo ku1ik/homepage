@@ -12,7 +12,7 @@ If you're working on some cool ruby console-based application or just want to ad
 
 Look at example irb session and see example usage:
 
-<a href="http://farm4.static.flickr.com/3450/3382620367_07e20a2678_o.png" rel="lightbox"><img src="http://farm4.static.flickr.com/3450/3382620367_dea29e3b05.jpg"></a>
+<img src="/images/posts/rainbow-1.png"></a>
 
 Rainbow adds following methods to String class:
 
